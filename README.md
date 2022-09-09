@@ -6,7 +6,7 @@ interface prova: {
   texto: string;
   enunciado: string;
   questoes: {
-    id:number;
+    id:number
     opcao: string;
     correto: boolean;
   }
