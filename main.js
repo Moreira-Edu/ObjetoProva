@@ -1,3 +1,5 @@
+import { Test } from "./src/data/index.js";
+
 function createElAndAtt(el, attr, innerHTML = false) {
   const element = document.createElement(el);
   if (innerHTML) element.innerHTML = innerHTML;
