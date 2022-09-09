@@ -54,8 +54,8 @@ function renderQuestions(questions) {
       const ol = createElAndAtt("ol", { class: "answers-options" });
       const questionsOptionsLi = renderAnswerOptions(QuestionId, AnswerOptions);
 
-      if(QuestionText) li.appendChild(p);
-      if(Font) li.appendChild(small);
+      if (QuestionText) li.appendChild(p);
+      if (Font) li.appendChild(small);
       li.appendChild(span);
       li.appendChild(ol);
       ol.appendChild(questionsOptionsLi);
@@ -75,4 +75,3 @@ function sendAnswers() {
   alert("TODO: pegar respostas e checar");
   // document.querySelector('input[name="question-${questionId}"]:checked').value;
 }
-S;

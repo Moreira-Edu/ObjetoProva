@@ -1,17 +1,16 @@
 # Prova
 
 ```ts
-interface prova: {
-  categoria: string;
-  texto: string;
-  enunciado: string;
-  questoes: {
-    id:number;
-    opcao: string;
-    correto: boolean;
-  }
-  [];
-  fonte: string;
-}
-[];
+interface Test: {
+    QuestionId: number;
+    DisciplineType: string;
+    QuestionText: string;
+    QuestionEnunciation: string;
+    AnswerOptions: {
+        id: number;
+        AnswerText: string;
+        isCorrect: boolean;
+    }[];
+    Font: string;
+}[]
 ```
