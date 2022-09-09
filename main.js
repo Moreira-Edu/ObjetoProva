@@ -1,45 +1,48 @@
-import { prova } from "./src/data/index.js";
-
+const container = document.querySelector("#questionsContainer");
 const fragment = document.createDocumentFragment();
-const body = document.querySelector("body");
 
-const liQuestoes = document.createElement("ol");
+const questionsInHtml = document.createElement("ol");
 
-const renderOpcao = (opcoes) =>
-  opcoes
+function renderAnswerOptions(questionId, options) {
+  return options
+    .map(({ id, AnswerText }) => {
+      return `<li>
+        <input id='answer-${id}' name='question-${questionId}' type="radio" data-id='${id}' />
+        <label for='answer-${id}'>${AnswerText}</label>
+      </li>`;
+    })
+    .join("");
+}
+
+function renderQuestions(questions) {
+  return questions
     .map(
-      ({ opcao, id }, i) =>
-        `<p style='cursor: pointer; background-color: aqua' data-id='${id}'>${opcao}</p>`
+      ({
+        QuestionId,
+        QuestionText,
+        QuestionEnunciation,
+        AnswerOptions,
+        Font,
+      }) => {
+        return `<li>
+      ${QuestionText ? `<p>${QuestionText}</p>` : ""}
+      ${Font ? `<small>${Font}</small> <br>` : ""}
+      <span>${QuestionEnunciation}</span>
+      <ol class="answers-options">
+        ${renderAnswerOptions(QuestionId, AnswerOptions)}
+      </ol>
+    </li>`;
+      }
     )
     .join("");
+}
 
-const itemQuestoes = prova
-  .map(({ texto, enunciado, questoes, fonte }) => {
-    return `
-   <li>
-   <p>${texto}</p>
-   <small>${fonte}</small>
-   <p>${enunciado}</p>
-   ${renderOpcao(questoes)}
-   </li>
-  `;
-  })
-  .join("");
-liQuestoes.innerHTML = itemQuestoes;
+questionsInHtml.innerHTML = renderQuestions(Test);
+fragment.append(questionsInHtml);
+container.append(fragment);
 
-fragment.append(liQuestoes);
-body.append(fragment);
-
-const respostas = document.querySelectorAll("[data-id]");
-respostas.forEach((resposta) => {
-  resposta.addEventListener("click", () => {
-    const index = Number(resposta.getAttribute("data-id"));
-    const [teste] = prova
-      .map(({ questoes }) => {
-        return questoes.find(({ id }) => id === index);
-      })
-      .filter((arr) => arr != undefined);
-
-    alert(teste.correto);
-  });
-});
+function sendAnswers(){
+  alert('TODO: pegar respostas e checar');
+  // document.querySelector('input[name="question-${questionId}"]:checked').value;
+}
+S
