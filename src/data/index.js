@@ -228,7 +228,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
 [Adaptado].`,
   },
   {
-    QuestionId: 3,
+    QuestionId: 4,
     DisciplineType: `Língua Portuguesa`,
     QuestionText: ``,
     QuestionEnunciation: `Assinale a frase correta quanto ao emprego da
@@ -268,7 +268,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     Font: ``,
   },
   {
-    QuestionId: 4,
+    QuestionId: 5,
     DisciplineType: `Língua Portuguesa`,
     QuestionText: ``,
     QuestionEnunciation: `Assinale a frase que segue as normas da língua
@@ -315,7 +315,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     Font: ``,
   },
   {
-    QuestionId: 5,
+    QuestionId: 6,
     DisciplineType: `Temas de Atualidade`,
     QuestionText: `O investidor Elon Musk, CEO da empresa espacial
     SpaceX, anunciou recentemente um plano que
@@ -368,7 +368,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     Font: ``,
   },
   {
-    QuestionId: 6,
+    QuestionId: 7,
     DisciplineType: `Temas de Atualidade`,
     QuestionText: ``,
     QuestionEnunciation: `A população estimada (2021) de Tijucas, segundo o
@@ -391,7 +391,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     Font: ``,
   },
   {
-    QuestionId: 7,
+    QuestionId: 8,
     DisciplineType: `Temas de Atualidade`,
     QuestionText: ``,
     QuestionEnunciation: `Em relação à pandemia de COVID-19 no Brasil, é
@@ -440,7 +440,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     Font: ``,
   },
   {
-    QuestionId: 8,
+    QuestionId: 9,
     DisciplineType: `Temas de Atualidade`,
     QuestionText: `No atual momento a indústria automobilística de
     muitos países, entre os quais o Brasil, encontra dificuldades
@@ -485,7 +485,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     Font: ``,
   },
   {
-    QuestionId: 9,
+    QuestionId: 10,
     DisciplineType: `Temas de Atualidade`,
     QuestionText: ``,
     QuestionEnunciation: `É correto sobre o desmatamento no Brasil.`,
@@ -538,7 +538,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     Font: ``,
   },
   {
-    QuestionId: 10,
+    QuestionId: 11,
     DisciplineType: `Noções de Informática`,
     QuestionText: `Quais resultados personalizados de pesquisa
     podem ser parametrizados nas configurações do
@@ -590,7 +590,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 11,
+    QuestionId: 12,
     DisciplineType: `Noções de Informática`,
     QuestionText: ``,
     QuestionEnunciation: `Assinale a alternativa que descreve corretamente
@@ -630,7 +630,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 12,
+    QuestionId: 13,
     DisciplineType: `Noções de Informática`,
     QuestionText: ``,
     QuestionEnunciation: `Assinale a alternativa que descreve corretamente
@@ -672,7 +672,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 13,
+    QuestionId: 14,
     DisciplineType: `Noções de Informática`,
     QuestionText: `A opção de salvamento automático do MS Word
     em português funciona ao salvar o arquivo na(s)
@@ -713,7 +713,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 14,
+    QuestionId: 15,
     DisciplineType: `Noções de Informática`,
     QuestionText: ``,
     QuestionEnunciation: `Qual a denominação correta da ocorrência de
@@ -731,7 +731,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 15,
+    QuestionId: 16,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: `Dona Vilma, de 75 anos, deambulante sem auxílio,
     precisa receber uma medicação intramuscular.`,
@@ -747,7 +747,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 16,
+    QuestionId: 17,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: `Você precisa administrar 450 mg de uma medicação
     em um paciente por via intramuscular. Na unidade
@@ -765,7 +765,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 17,
+    QuestionId: 18,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: `Você precisa administrar 450 mg de uma medicação
     em um paciente por via intramuscular. Na unidade
@@ -784,7 +784,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 18,
+    QuestionId: 19,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
     QuestionEnunciation: `Acerca dos conceitos que envolvem a atenção à
@@ -837,7 +837,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 19,
+    QuestionId: 20,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
     QuestionEnunciation: `Sobre os processos e manuseios dos artigos hospitalares,
@@ -886,7 +886,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 20,
+    QuestionId: 21,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
     QuestionEnunciation: `Sobre a Anatomia e Fisiologia dos órgãos e sistemas,
@@ -935,7 +935,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 21,
+    QuestionId: 22,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
     QuestionEnunciation: `Sobre a aferição dos sinais vitais, é isCorrect
@@ -984,7 +984,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 22,
+    QuestionId: 23,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
     QuestionEnunciation: `Assinale a alternativa correta sobre os cuidados
@@ -1033,7 +1033,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 23,
+    QuestionId: 24,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
     QuestionEnunciation: `Acerca dos cuidados com sondas e cateteres, é
@@ -1081,7 +1081,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 24,
+    QuestionId: 25,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
     QuestionEnunciation: `Sobre os cuidados de higiene e conforto, é isCorrect
@@ -1127,7 +1127,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 25,
+    QuestionId: 26,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: `No Brasil, desde o início do século XIX, as vacinas
     são utilizadas como medida de controle de doenças.`,
@@ -1175,7 +1175,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 26,
+    QuestionId: 27,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: `Nos últimos anos, tem ocorrido um grande
     avanço no tratamento das queimaduras, resultando
@@ -1228,7 +1228,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 27,
+    QuestionId: 28,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: `A cadeia de sobrevivência foi criada para ressaltar
     a importância da adoção de atitudes organizadas e
@@ -1272,7 +1272,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 28,
+    QuestionId: 29,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
     QuestionEnunciation: `Sobre o Aleitamento materno, é correto afirmar:`,
@@ -1314,7 +1314,7 @@ corretas.`,
     Font: ``,
   },
   {
-    QuestionId: 29,
+    QuestionId: 30,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: `A realização da glicemia capilar ou hemoglicoteste
     é indicada sobretudo para pacientes diabéticos
