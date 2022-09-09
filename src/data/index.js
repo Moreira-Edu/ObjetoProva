@@ -1,3 +1,4 @@
+let id = 1;
 export const prova = [
   {
     categoria: `Língua Portuguesa`,
@@ -34,26 +35,31 @@ export const prova = [
     paroxítonas e têm o mesmo número de sílabas.`,
     questoes: [
       {
+        id: id++,
         opcao: `municípios • residência • orçamento •
       autoestima • responsáveis`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `moradia • precisamos • concluídos •
       prefeituras • imprestável`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `assembleia • Catarina • humano •
       precisávamos • estado`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `projeto • pessoas • disponíveis •
       pobreza • programa`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `índice • déficit • início • próximo • construídas`,
         correto: false,
       },
@@ -98,12 +104,14 @@ export const prova = [
     enunciado: `Sobre o texto, é correto o que se afirma em:`,
     questoes: [
       {
+        id: id++,
         opcao: `Com o programa SC Mais Moradia, o Governo
 do Estado prevê zerar o déficit habitacional em
 curto prazo.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O município de Tijucas será um dos contemplados
       pelo programa SC Mais Moradia, pois tem
       um dos mais baixos índices de IDH de Santa
@@ -111,18 +119,21 @@ curto prazo.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A totalidade dos recursos previstos para o
       programa SC Mais Moradia estão incluídos no
       orçamento do ano de 2022.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O programa SC Mais Moradia prevê que as prefeituras
       municipais doarão os terrenos e farão
       os trabalhos de construção das casas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Com o objetivo de atender as famílias que
       vivem em maior vulnerabilidade social hoje, a
       intenção do Governo é construir oito mil casas.`,
@@ -169,12 +180,14 @@ curto prazo.`,
     enunciado: `Assinale a alternativa correta.`,
     questoes: [
       {
+        id: id++,
         opcao: `Em “serão construídas casas para pessoas que
       vivem em situação de pobreza extrema”, ocorrem
       duas palavras oxítonas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Na frase “Queremos retirar famílias de áreas de
       risco e dar mais dignidade para elas”, ocorre
       um pronome pessoal na função de sujeito da
@@ -182,6 +195,7 @@ curto prazo.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `No período “Segundo o governador, o programa
       tem início ainda este ano, com recursos
       disponíveis de um remanejamento orçamentário”,
@@ -189,12 +203,14 @@ curto prazo.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Em “Isso vai ser feito com a parceria dos nossos
       municípios”, o termo sublinhado exerce a função
       de objeto indireto.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Na frase “Santa Catarina volta a ter um programa
       específico para habitação, após mais
       de uma década”, o termo sublinhado exerce a
@@ -214,26 +230,31 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     crase.`,
     questoes: [
       {
+        id: id++,
         opcao: `A meia noite, sem que as convidadas percebessem
       a estratégia, saiu às pressas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A política de defesa das fronteiras subordina-se
       à lei e as decisões do presidente.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Esta receita é semelhante àquela que enviei à
       redação da revista há dois meses.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Convém dizer à ela que os materiais de construção
       serão descarregados hoje, às 17 horas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Este projeto deve adequar-se à finalidade a
       qual se destina.`,
         correto: false,
@@ -248,23 +269,27 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     padrão quanto à concordância nominal e verbal.`,
     questoes: [
       {
+        id: id++,
         opcao: `Se não houvessem políticos, quem regariam as
       árvores em dias de chuva?`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Dois terços do cloro que comprei ontem foi
       usado na lavação dos telhados, que haviam
       dois anos que não era limpo.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Com o penúltimo inquérito concluído, os quais
       foram muito reveladores, nós já podemos se
       despedir de Castro e voltar para Porto Belo.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Os piores indicadores encontrados nos municípios
       com menor desenvolvimento humano
       evidencia a necessidade de ampliar as ações
@@ -272,6 +297,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `A melhoria da saúde materna pode ser avaliada
       por meio dos indicadores de saúde, os quais
       refletem não somente a qualidade das ações de
@@ -291,12 +317,14 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     enunciado: `Assinale a alternativa correta a respeito do assunto.`,
     questoes: [
       {
+        id: id++,
         opcao: `A colocação na órbita terrestre de milhares de
       satélites, que permitiram a conexão de Internet
       em lugares remotos, como a região Amazônica.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `A colocação na órbita terrestre de milhares de
       satélites, que permitiram mudanças climáticas,
       possibilitando a contenção da desertificação da
@@ -304,6 +332,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `O projeto Starlink permitiria o transporte de
       pessoas e cargas de regiões remotas aos grandes
       centros urbanos, com grande velocidade e
@@ -311,6 +340,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `O projeto Starlink possibilitaria o monitoramento
       da população das áreas remotas e,
       através de sinais digitais, controlar saúde, a
@@ -319,6 +349,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `O projeto Orwel que permitiria a localização de
       criminosos e pessoas com mandado de prisão a
       cumprir, em qualquer ponto do território nacional,
@@ -335,11 +366,11 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     enunciado: `A população estimada (2021) de Tijucas, segundo o
     IBGE, é de:`,
     questoes: [
-      { opcao: `Um pouco mais de 19 mil pessoas.`, correto: false },
-      { opcao: `Um pouco mais de 39 mil pessoas.`, correto: true },
-      { opcao: `Cerca de 45 mil pessoas.`, correto: false },
-      { opcao: `Cerca de 84 mil pessoas.`, correto: false },
-      { opcao: `Mais de 100 mil habitantes.`, correto: false },
+      { id: id++, opcao: `Um pouco mais de 19 mil pessoas.`, correto: false },
+      { id: id++, opcao: `Um pouco mais de 39 mil pessoas.`, correto: true },
+      { id: id++, opcao: `Cerca de 45 mil pessoas.`, correto: false },
+      { id: id++, opcao: `Cerca de 84 mil pessoas.`, correto: false },
+      { id: id++, opcao: `Mais de 100 mil habitantes.`, correto: false },
     ],
     fonte: ``,
   },
@@ -350,18 +381,21 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     correto afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `Desde fevereiro de 2021, os casos novos de
       COVID-19 passaram a declinar, mas o número
       de óbitos aumenta a cada dia.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O Brasil é hoje o país que tem o maior número
       de pessoas totalmente vacinadas contra a
       COVID 19.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Alemanha, Áustria, Estados Unidos da América
       e Brasil são os países que apresentam o maior
       número de pessoas que recusa sistematicamente
@@ -369,6 +403,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `Muito embora o número de casos de COVID-
       19 motivados pelas variantes “B” e “C” tenham
       declinado, o número de infectados pela
@@ -378,6 +413,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `A partir do início de novembro de 2021, os
       novos casos de COVID-19 passaram a declinar,
       como também o número de óbitos.`,
@@ -395,21 +431,25 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     enunciado: `Assinale a alternativa que indica a causa do problema.`,
     questoes: [
       {
+        id: id++,
         opcao: `O excesso de produção de veículos na Europa e
       Ásia.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A baixa demanda por automóveis, em virtude
       do crescente aumento de preços.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A falta de aço, materiais plásticos, pneus e componentes
       eletrônicos.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `O direcionamento dos materiais disponíveis
       para a indústria dos Estados Unidos e a consequente
       falta de matéria-prima nos países do
@@ -417,6 +457,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `A recusa das indústrias chinesas de venderem
       produtos com alto valor agregado, como chips
       e outros componentes eletrônicos.`,
@@ -431,6 +472,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     enunciado: `É correto sobre o desmatamento no Brasil.`,
     questoes: [
       {
+        id: id++,
         opcao: `Segundo o Instituto Nacional de Pesquisas
       Espaciais (INPE), a taxa de desmatamento na
       Amazônia Legal Brasileira (ALB) teve um crescimento
@@ -438,6 +480,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `As autoridades brasileiras declararam recentemente
       que não conseguirão controlar o desmatamento
       no Brasil e solicitaram o envio para
@@ -447,6 +490,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `As autoridades brasileiras sustentaram, na
       última conferência internacional sobre o clima,
       que os índices reais de desmatamento na
@@ -455,6 +499,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `Os organismos de controle do desmatamento
       asseveram que, mesmo que ainda sejam significativas,
       as taxas de desmatamento no Brasil
@@ -463,6 +508,7 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
         correto: false,
       },
       {
+        id: id++,
         opcao: `Segundo o Instituto Nacional de Pesquisas
       Espaciais (INPE), a taxa de desmatamento na
       Amazônia Legal Brasileira (ALB) teve um crescimento
@@ -495,11 +541,27 @@ combater-deficit-habitacional. Acesso em: 20 nov. 2021.
     enunciado: `Assinale a alternativa que indica todas as afirmativas
 corretas.`,
     questoes: [
-      { opcao: `É correta apenas a afirmativa 3.`, correto: false },
-      { opcao: `São corretas apenas as afirmativas 1 e 2.`, correto: true },
-      { opcao: `São corretas apenas as afirmativas 1 e 3.`, correto: false },
-      { opcao: `São corretas apenas as afirmativas 2 e 3.`, correto: false },
-      { opcao: `São corretas as afirmativas 1, 2 e 3.`, correto: false },
+      { id: id++, opcao: `É correta apenas a afirmativa 3.`, correto: false },
+      {
+        id: id++,
+        opcao: `São corretas apenas as afirmativas 1 e 2.`,
+        correto: true,
+      },
+      {
+        id: id++,
+        opcao: `São corretas apenas as afirmativas 1 e 3.`,
+        correto: false,
+      },
+      {
+        id: id++,
+        opcao: `São corretas apenas as afirmativas 2 e 3.`,
+        correto: false,
+      },
+      {
+        id: id++,
+        opcao: `São corretas as afirmativas 1, 2 e 3.`,
+        correto: false,
+      },
     ],
     fonte: ``,
   },
@@ -510,26 +572,31 @@ corretas.`,
     a funcionalidade do Google denominada safe search.`,
     questoes: [
       {
+        id: id++,
         opcao: `Elimina resultados de busca relacionados com
       Malware e Spyware, mas não vírus.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Elimina resultados de busca relacionados com
       vírus, mas não malware e spyware.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Esconde texto e imagens com conteúdo explícito
       dos seus resultados de pesquisa.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Esconde resultados de busca que possam conter
       software do tipo ransomware.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Retorna resultados de pesquisa somente de
       domínios conhecidos e registrados no google.`,
         correto: false,
@@ -544,27 +611,32 @@ corretas.`,
     o Microsoft 365.`,
     questoes: [
       {
+        id: id++,
         opcao: `É o antigo Office 365 e pode conter os aplicativos
       do Office, incluindo e-mail.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `É um serviço de assinatura do sistema operacional
       Windows.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `É um serviço de armazenamento online de
       documentos e substitui o antigo OneDrive.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `É uma assinatura mensal do serviço de segurança
       da informação da Microsoft, com atualizações
       de firewall e antivírus.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `É um serviço de suporte disponível 365 dias por
       ano e 24 horas por dia, com técnicos no idioma
       nativo do assinante.`,
@@ -585,11 +657,24 @@ corretas.`,
     enunciado: `Assinale a alternativa que indica todas as afirmativas
 corretas.`,
     questoes: [
-      { opcao: `É correta apenas a afirmativa 3.`, correto: false },
-      { opcao: `São corretas apenas as afirmativas 1 e 2.`, correto: false },
-      { opcao: `São corretas apenas as afirmativas 1 e 3.`, correto: false },
-      { opcao: `São corretas apenas as afirmativas 2 e 3.`, correto: true },
+      { id: id++, opcao: `É correta apenas a afirmativa 3.`, correto: false },
       {
+        id: id++,
+        opcao: `São corretas apenas as afirmativas 1 e 2.`,
+        correto: false,
+      },
+      {
+        id: id++,
+        opcao: `São corretas apenas as afirmativas 1 e 3.`,
+        correto: false,
+      },
+      {
+        id: id++,
+        opcao: `São corretas apenas as afirmativas 2 e 3.`,
+        correto: true,
+      },
+      {
+        id: id++,
         opcao: `São corretas apenas as afirmativas 1, 2 e 3.`,
         correto: false,
       },
@@ -605,11 +690,11 @@ corretas.`,
     normalmente exigindo o pagamento de um resgate
     para prover uma chave para descriptografá-los?`,
     questoes: [
-      { opcao: `Vírus`, correto: false },
-      { opcao: `Malware`, correto: false },
-      { opcao: `Spyware`, correto: false },
-      { opcao: `Ransomware`, correto: true },
-      { opcao: `Sequestro Digital`, correto: false },
+      { id: id++, opcao: `Vírus`, correto: false },
+      { id: id++, opcao: `Malware`, correto: false },
+      { id: id++, opcao: `Spyware`, correto: false },
+      { id: id++, opcao: `Ransomware`, correto: true },
+      { id: id++, opcao: `Sequestro Digital`, correto: false },
     ],
     fonte: ``,
   },
@@ -620,11 +705,11 @@ corretas.`,
     enunciado: `O primeiro músculo ou área de escolha para esse tipo
     de medicação é:`,
     questoes: [
-      { opcao: `A área dorsoglútea.`, correto: false },
-      { opcao: `A área ventroglútea.`, correto: true },
-      { opcao: `O músculo vasto-lateral.`, correto: false },
-      { opcao: `O músculo reto-femural.`, correto: false },
-      { opcao: `O músculo deltoide.`, correto: false },
+      { id: id++, opcao: `A área dorsoglútea.`, correto: false },
+      { id: id++, opcao: `A área ventroglútea.`, correto: true },
+      { id: id++, opcao: `O músculo vasto-lateral.`, correto: false },
+      { id: id++, opcao: `O músculo reto-femural.`, correto: false },
+      { id: id++, opcao: `O músculo deltoide.`, correto: false },
     ],
     fonte: ``,
   },
@@ -637,11 +722,11 @@ corretas.`,
     enunciado: `Quantos ml serão necessários aspirar da ampola para
     que o paciente receba a dose correta?`,
     questoes: [
-      { opcao: `0,8 ml`, correto: false },
-      { opcao: `1 ml`, correto: false },
-      { opcao: `1,5 ml`, correto: false },
-      { opcao: `1,8 ml`, correto: true },
-      { opcao: `2 ml`, correto: false },
+      { id: id++, opcao: `0,8 ml`, correto: false },
+      { id: id++, opcao: `1 ml`, correto: false },
+      { id: id++, opcao: `1,5 ml`, correto: false },
+      { id: id++, opcao: `1,8 ml`, correto: true },
+      { id: id++, opcao: `2 ml`, correto: false },
     ],
     fonte: ``,
   },
@@ -655,11 +740,11 @@ corretas.`,
     solução fisiológica precisará ser programada para que
     o paciente receba 1000 ml em 6 horas?`,
     questoes: [
-      { opcao: `6 gotas por minuto`, correto: false },
-      { opcao: `12 gotas por minuto`, correto: false },
-      { opcao: `21 gotas por minuto`, correto: false },
-      { opcao: `35 gotas por minuto`, correto: false },
-      { opcao: `55 gotas por minuto`, correto: true },
+      { id: id++, opcao: `6 gotas por minuto`, correto: false },
+      { id: id++, opcao: `12 gotas por minuto`, correto: false },
+      { id: id++, opcao: `21 gotas por minuto`, correto: false },
+      { id: id++, opcao: `35 gotas por minuto`, correto: false },
+      { id: id++, opcao: `55 gotas por minuto`, correto: true },
     ],
     fonte: ``,
   },
@@ -670,17 +755,20 @@ corretas.`,
     saúde, é correto afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `A Atenção Secundária também é conhecida
       como alta complexidade.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O SAMU 192 (Serviço de Atendimento Móvel
         de Urgência) e as Unidades de Pronto Atendimento
         (UPA) fazem parte da atenção terciária.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A Atenção Primária é constituída pelas Unidades
       Básicas de Saúde (UBS), pelos Agentes
       Comunitários de Saúde (ACS), pela Equipe de
@@ -689,6 +777,7 @@ corretas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `A Atenção Secundária é o conjunto de terapias
       e procedimentos de elevada especialização.
       Organiza também procedimentos que envolvem
@@ -699,6 +788,7 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A Atenção Terciária é formada pelos serviços
       especializados em nível ambulatorial e hospitalar,
       com densidade tecnológica intermediária.
@@ -717,18 +807,21 @@ corretas.`,
     é correto afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `A estufa é um exemplo de calor úmido, sendo
       um método bastante efetivo e causa poucos
       danos aos instrumentos.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A autoclave é um aparelho que consegue esterilizar
       materiais e artigos médico-hospitalares
       por meio do calor úmido sob pressão.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `A desinfecção serve para eliminar microrganismos
       pelo uso de desinfetantes e ela elimina a
       necessidade de limpeza previa dos instrumentos
@@ -737,12 +830,14 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Descontaminação e desinfecção são sinônimos
       e têm por finalidade reduzir o número de
       microrganismos presentes nos artigos sujos.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A descontaminação é o processo de destruição
       de todas as formas de vida microbiana, ou seja,
       bactérias na forma vegetativa e esporuladas,
@@ -760,23 +855,27 @@ corretas.`,
     é correto afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `O intestino delgado é a última porção do intestino
       e é mais extenso que o intestino grosso.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Os rins produzem um hormônio denominado
       insulina, que estimula a produção de glóbulos
       vermelhos na medula óssea.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O coração é um órgão muscular oco e seu lado
       esquerdo bombeia sangue para os pulmões,
       onde o oxigênio é eliminado.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O sistema digestivo, que se estende da boca ao
       estômago, é responsável por receber os alimentos,
       decompô-los em nutrientes (um processo
@@ -786,6 +885,7 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O sistema nervoso é constituído por dois sistemas
       distintos: o sistema nervoso central (o
       cérebro e a medula espinhal) e o sistema nervoso
@@ -803,6 +903,7 @@ corretas.`,
     afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `Antes da aferição da pressão arterial é importante
       checar se o paciente não está com bexiga
       cheia, ou mesmo se acabou de fumar ou realizar
@@ -811,18 +912,21 @@ corretas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Para a avaliação do pulso o de primeira escolha
       deve ser o pulso pedioso ou o inguinal, por
       serem mais fortes e palpáveis.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A frequência respiratória deve ser contada em
       1 minuto e seu valor de referência para adultos
       é em torno de 40 a 60 movimentos por minuto.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O estetoscópio na avaliação da pressão arterial
       em aparelhos não automáticos é opcional, pois
       é possível saber com exatidão o valor da pressão
@@ -830,6 +934,7 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A temperatura axilar deve ser vista em termômetros
       de coluna de mercúrio por serem
       os mais seguros e conferirem resultados mais
@@ -846,17 +951,20 @@ corretas.`,
     com medicações e vias de administração.`,
     questoes: [
       {
+        id: id++,
         opcao: `A via intratecal é a administração de medicação
       diretamente na uretra através da sonda vesical.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A via intradérmica é utilizada para inserir a
       medicação no tecido hipodérmico e possui
       absorção mais rápida que a subcutânea.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Na via endovenosa, o medicamento é administrado
       diretamente no vaso sanguíneo e chega
       imediatamente à corrente sanguínea e tende
@@ -865,6 +973,7 @@ corretas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Anticoagulantes são exemplos de medicações
       que podem ser administradas por via subcutânea
       e dentre os cuidados que requer está o fato
@@ -873,6 +982,7 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Na via intramuscular, a escolha do músculo
       independente do volume a ser infundido,
       porém o mais indicado é o deltoide por comportar
@@ -889,6 +999,7 @@ corretas.`,
     correto afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `Quando ocorrer saída acidental da sonda jejunal,
       esta poderá ser repassada pelo técnico de
       enfermagem, desde que respeitando a medida
@@ -896,18 +1007,21 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Durante o banho no leito, a bolsa coletora da
       sonda vesical deverá ser colocada acima da
       altura da bexiga, para impedir o refluxo urinário.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O uso do cateter nasal deve ter como cuidados
       manter o umidificador sempre com solução
       fisiológica estéril no nível indicado.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A passagem da sonda vesical de demora é privativa
       do enfermeiro, porém o técnico de enfermagem
       pode realizar cuidados como observar,
@@ -915,6 +1029,7 @@ corretas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Quando o paciente estiver em uso de sonda gástrica,
       a fixação na narina deve ser mantida sempre
       no mesmo lugar para evitar ficar retirando a
@@ -931,30 +1046,35 @@ corretas.`,
     afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `O banho de aspersão deverá ser sempre supervisionado,
       sobretudo quando se tratar de idosos
       devido ao grande risco de quedas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Durante a realização de banho no leito, a técnica
       correta deve iniciar sempre pelos pés e
       subindo em direção à cabeça.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O auxílio no banho é de responsabilidade do
       acompanhante, devendo a equipe de enfermagem
       apenas dar o suporte necessário.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `O banho de aspersão é aquele realizado no
       leito, com o paciente em decúbito dorsal e com
       o uso de bacias e compressas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A prótese bucal (dentadura) deve ser retirada
       para limpeza apenas uma vez ao dia, preferencialmente
       à noite, para não constranger a
@@ -971,22 +1091,26 @@ corretas.`,
     enunciado: `Sobre essa temática, é correto afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `A vacina DPT protege contra sarampo, rubéola
       e caxumba.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A vacina tríplice viral protege contra difteria,
       tétano e coqueluche.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `A vacina da febre amarela é feita com vírus
       atenuados e por isso deve ser realizada apenas
       após 5 anos de idade.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `As vacinas recomendadas para as crianças têm
       por objetivo proteger esse grupo o mais precocemente
       possível, garantindo o esquema básico
@@ -995,6 +1119,7 @@ corretas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Considerando o risco, a vulnerabilidade e as
       especificidades sociais, o Programa Nacional
       de Imunização define calendários de vacinação
@@ -1016,12 +1141,14 @@ corretas.`,
     afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `Quando o local queimado apresentar bolhas,
       recomenda-se que estas sejam rompidas para
       favorecer a cicatrização.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Deve ser providenciado, após o acidente, o
       resfriamento do local queimado, se possível
       com água corrente entre 8 e 15°C entre 15 a 20
@@ -1030,6 +1157,7 @@ corretas.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Está indicada a aplicação de gelo em contato
       direto com a pele queimada pois o frio excessivo
       também pode auxiliar no resfriamento da
@@ -1037,6 +1165,7 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Indica-se, imediatamente após o acidente por
       queimadura, a remoção das roupas, joias e
       acessórios, mesmo que estes estejam aderidos
@@ -1044,6 +1173,7 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Para favorecer a cicatrização, o local da queimadura
       deverá sempre estar coberto com
       pomadas e cremes, como creme dental, pois
@@ -1063,27 +1193,32 @@ corretas.`,
     enunciado: `O primeiro elo da cadeia da sobrevivência é:`,
     questoes: [
       {
+        id: id++,
         opcao: `O reconhecimento rápido da PCR e acionamento
       do serviço de emergência.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Iniciar manobras de reanimação até que
       alguém veja e peça socorro.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Iniciar ventilação imediata para aumentar as
       chances de sobrevida.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Encaminhar para o serviço de emergência em
       carro próprio para reduzir o tempo de espera
       para o atendimento.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Realizar desfibrilação precoce com desfibrilador
       automático externo.`,
         correto: false,
@@ -1097,28 +1232,33 @@ corretas.`,
     enunciado: `Sobre o Aleitamento materno, é correto afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `O tempo de mamada deve ser controlado,
       intercalando as mamas a cada 15 minutos.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Deve ser exclusivo até os 4 meses de idade,
       sendo complementado a partir disso com chás
       e sucos.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Deve ser ofertado em livre demanda e de forma
       exclusiva até os 6 meses de idade.`,
         correto: true,
       },
       {
+        id: id++,
         opcao: `Deve ser restrito quando a mãe tem o leite
       fraco, devendo ser complementado com fórmulas
       artificiais.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Deve ser exclusivo até os 9 meses, quando
       então se passa a introduzir de forma gradativa
       outros alimentos.`,
@@ -1136,12 +1276,14 @@ corretas.`,
     enunciado: `Sobre essa prática, é correto afirmar:`,
     questoes: [
       {
+        id: id++,
         opcao: `Trata-se de um teste realizado para obter mensurações
       de glicemia a partir de amostras da
       urina por meio de fitas reagentes.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Trata-se de um teste rápido para mensurar a
       glicemia e dentre os cuidados para realizar o
       mesmo destaca-se a necessidade de limpar a
@@ -1149,12 +1291,14 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Trata-se de um teste feito no capilar sanguíneo
       que deve ser realizado sempre no mesmo dedo
       para não dar diferenças nos resultados.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Trata-se de um teste que deve ser realizado
       perfurando sempre a parte central dos dedos,
       evitando as áreas periféricas, pois é o local que
@@ -1163,6 +1307,7 @@ corretas.`,
         correto: false,
       },
       {
+        id: id++,
         opcao: `Trata-se de um teste realizado a partir de uma
       gota de sangue capilar obtida a partir de uma
       amostra geralmente coletada na ponta dos
