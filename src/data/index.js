@@ -1,6 +1,6 @@
 let id = 1;
 
-const Test = [
+export const Test = [
   {
     QuestionId: 1,
     DisciplineType: `Língua Portuguesa`,
@@ -1373,8 +1373,10 @@ corretas.`,
  * @param {Number} answerId 
  * @returns {Boolean}
  */
-function checkAnswer(questionId, answerId) {
+export function checkAnswer(questionId, answerId) {
   return Test.find(({ QuestionId }) => questionId === QuestionId).AnswerOptions.find(
     ({ id }) => id === answerId
   ).isCorrect;
 }
+
+export default { Test, checkAnswer}
