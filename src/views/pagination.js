@@ -18,12 +18,14 @@ export function paginate(pageSize) {
       class: "container_switch",
     });
     for (let i = 1; i <= totalPages; i++) {
-      const button = createElAndAtt("button", {
-        ["data-switch"]: `${i - 1}`,
-        class: "button-switcher",
-      });
-
-      button.innerText = i;
+      const button = createElAndAtt(
+        "button",
+        {
+          ["data-switch"]: `${i - 1}`,
+          class: "button-switcher",
+        },
+        i
+      );
 
       containerSwitch.appendChild(button);
     }
