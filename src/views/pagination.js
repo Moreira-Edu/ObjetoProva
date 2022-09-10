@@ -13,7 +13,6 @@ export function paginate(pageSize) {
   }
 
   const totalPages = Math.ceil(totalItems / pageSize);
-  console.log(totalPages);
   const renderButtons = () => {
     const containerSwitch = createElAndAtt("div", {
       class: "container_switch",
