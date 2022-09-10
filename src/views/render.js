@@ -46,36 +46,46 @@ export function renderAnswerOptions(questionId, options) {
 
 /**
  * Render the test
- * @param {Object} Test Test with all questions
+ * @param {Object} container container with all questions
  * @returns {HTMLElement}
  */
-export function renderQuestions(Test) {
+export function renderQuestions(container) {
   const result = document.createDocumentFragment();
 
-  Test.forEach(
-    ({
-      QuestionId,
-      QuestionText,
-      QuestionEnunciation,
-      AnswerOptions,
-      Font,
-    }) => {
-      const li = createElAndAtt("li", {});
-      const p = createElAndAtt("p", {}, QuestionText);
-      const small = createElAndAtt("small", {}, Font);
-      const span = createElAndAtt("span", {}, QuestionEnunciation);
-      const ol = createElAndAtt("ol", { class: "answers-options" });
-      const questionsOptionsLi = renderAnswerOptions(QuestionId, AnswerOptions);
+  container.forEach((test, i) => {
+    const container = createElAndAtt("div", {
+      class: i != 0 && "page",
+      ["data-page"]: `page${i}`,
+    });
+    test.forEach(
+      ({
+        QuestionId,
+        QuestionText,
+        QuestionEnunciation,
+        AnswerOptions,
+        Font,
+      }) => {
+        const li = createElAndAtt("li", {});
+        const p = createElAndAtt("p", {}, QuestionText);
+        const small = createElAndAtt("small", {}, Font);
+        const span = createElAndAtt("span", {}, QuestionEnunciation);
+        const ol = createElAndAtt("ol", { class: "answers-options" });
+        const questionsOptionsLi = renderAnswerOptions(
+          QuestionId,
+          AnswerOptions
+        );
 
-      if (QuestionText) li.appendChild(p);
-      if (Font) li.appendChild(small);
-      li.appendChild(span);
-      li.appendChild(ol);
-      ol.appendChild(questionsOptionsLi);
+        if (QuestionText) li.appendChild(p);
+        if (Font) li.appendChild(small);
+        li.appendChild(span);
+        li.appendChild(ol);
+        ol.appendChild(questionsOptionsLi);
 
-      result.appendChild(li);
-    }
-  );
+        container.appendChild(li);
+      }
+    );
+    result.appendChild(container);
+  });
 
   return result;
 }

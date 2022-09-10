@@ -1,16 +1,18 @@
-import { Test } from "./src/data/index.js";
-import { renderQuestions } from "./src/views/render.js";
+import { paginate } from "./src/views/pagination.js";
 
-const container = document.querySelector("#questionsContainer");
-const fragment = document.createDocumentFragment();
+const { renderPages, switchPage } = paginate(3);
+renderPages();
 
-const questionsInHtml = document.createElement("ol");
+const switchers = document.querySelectorAll("[data-switch]");
+for (let button of switchers) {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    switchPage(e.target.getAttribute("data-switch"));
+  });
+}
 
-questionsInHtml.appendChild(renderQuestions(Test));
-fragment.append(questionsInHtml);
-container.append(fragment);
-
-function sendAnswers() {
+function sendAnswers(e) {
+  e.preventDefault();
   alert("TODO: pegar respostas e checar");
   // document.querySelector('input[name="question-${questionId}"]:checked').value;
 }
