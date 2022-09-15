@@ -1,18 +1,22 @@
-import { paginate } from "./src/views/pagination.js";
+import changePageSize from "./src/helpers/changePageSize.js";
+import switchers from "./src/helpers/switchPage.js";
 
-const { renderPages, switchPage } = paginate(3);
-renderPages();
+const pageSize = document.querySelector("#select");
 
-const switchers = document.querySelectorAll("[data-switch]");
-for (let button of switchers) {
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-    switchPage(e.target.getAttribute("data-switch"));
-  });
-}
+pageSize.addEventListener("change", (e) => {
+  e.preventDefault();
+  changePageSize(e.target.value);
+  switchers();
+});
+
+window.addEventListener("load", () => {
+  changePageSize(pageSize.value);
+  switchers();
+});
 
 function sendAnswers(e) {
   e.preventDefault();
+
   alert("TODO: pegar respostas e checar");
   // document.querySelector('input[name="question-${questionId}"]:checked').value;
 }
