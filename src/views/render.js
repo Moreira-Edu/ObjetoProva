@@ -54,7 +54,7 @@ export function renderQuestions(container) {
 
   container.forEach((test, i) => {
     const container = createElAndAtt("div", {
-      class: i != 0 && "page",
+      class: "page",
       ["data-page"]: `page${i}`,
     });
     test.forEach(
