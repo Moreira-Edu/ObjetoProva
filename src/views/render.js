@@ -1,14 +1,37 @@
+import { Test, markAnswer } from "../data/index.js";
 /**
  * Create a HTML Element and bind Attributes
  * @param {String} el HTML element name
  * @param {Object} attr Attributes for HTML element
- * @param {String} innerHTML Optional innerHtml access
+ * @param {Object} options Optional configs {innerHtml , [childElements], {eventsListeners}}
+ * @param {String} options.innerHTML
+ * @param {Array} options.childElements
+ * @param {Array} options.eventsListeners
  * @returns {HTMLElement}
  */
-export function createElAndAtt(el, attr, innerHTML = false) {
+export function createElAndAtt(el, attr, options = false) {
   const element = document.createElement(el);
-  if (innerHTML) element.innerHTML = innerHTML;
+
+  if (options) {
+    if (options.innerHTML) {
+      element.innerHTML = options.innerHTML;
+    }
+    if (options.childElements) {
+      options.childElements.forEach((htmlElement) => {
+        element.appendChild(htmlElement);
+      });
+    }
+    if (options.eventsListeners) {
+      Object.entries(options.eventsListeners).forEach(
+        ([eventListenerName, eventListener]) => {
+          element.addEventListener(eventListenerName, eventListener);
+        }
+      );
+    }
+  }
+
   if (!attr) return element;
+
   Object.entries(attr).forEach(([key, value]) => {
     element.setAttribute(key, value);
   });
@@ -26,13 +49,27 @@ export function renderAnswerOptions(questionId, options) {
   const result = document.createDocumentFragment();
 
   options.forEach(({ id, AnswerText }) => {
-    const label = createElAndAtt("label", { for: `answer-${id}` }, AnswerText);
-    const input = createElAndAtt("input", {
-      id: `answer-${id}`,
-      name: `question-${questionId}`,
-      type: "radio",
-      "data-id": id,
-    });
+    const label = createElAndAtt(
+      "label",
+      { for: `answer-${id}` },
+      { innerHTML: AnswerText }
+    );
+    const input = createElAndAtt(
+      "input",
+      {
+        id: `answer-${id}`,
+        name: `question-${questionId}`,
+        type: "radio",
+        "data-id": id,
+      },
+      {
+        eventsListeners: {
+          click: () => {
+            markAnswer(questionId, id);
+          },
+        },
+      }
+    );
     const li = createElAndAtt("li", {});
 
     li.appendChild(input);
@@ -49,45 +86,55 @@ export function renderAnswerOptions(questionId, options) {
  * @param {Object} container container with all questions
  * @returns {HTMLElement}
  */
-export function renderQuestions(container) {
+export function loadElementsQuestions() {
   const result = document.createDocumentFragment();
 
-  container.forEach((test, i) => {
-    const container = createElAndAtt("div", {
-      class: "page",
-      ["data-page"]: `page${i}`,
-    });
-    test.forEach(
-      ({
-        QuestionId,
-        QuestionText,
-        QuestionEnunciation,
-        AnswerOptions,
-        Font,
-      }) => {
-        const li = createElAndAtt("li", {});
-        const p = createElAndAtt("p", {}, QuestionText);
-        const small = createElAndAtt("small", {}, Font);
-        const span = createElAndAtt("span", {}, QuestionEnunciation);
-        const ol = createElAndAtt("ol", { class: "answers-options" });
-        const questionsOptionsLi = renderAnswerOptions(
-          QuestionId,
-          AnswerOptions
-        );
+  Test.forEach(
+    ({
+      QuestionId,
+      QuestionText,
+      QuestionEnunciation,
+      AnswerOptions,
+      Font,
+    }) => {
+      const li = createElAndAtt("li", { questionId: QuestionId });
 
-        if (QuestionText) li.appendChild(p);
-        if (Font) li.appendChild(small);
-        li.appendChild(span);
-        li.appendChild(ol);
-        ol.appendChild(questionsOptionsLi);
+      const questionTexts = createElAndAtt(
+        "div",
+        { "question-id": QuestionId },
+        {
+          childElements: [
+            createElAndAtt("p", {}, { innerHTML: QuestionText }),
+            createElAndAtt("small", {}, { innerHTML: Font }),
+            createElAndAtt("span", {}, { innerHTML: QuestionEnunciation }),
+          ],
+        }
+      );
 
-        container.appendChild(li);
-      }
-    );
-    result.appendChild(container);
-  });
+      const ol = createElAndAtt("ol", { class: "answers-options" });
+
+      const questionsOptionsLi = renderAnswerOptions(QuestionId, AnswerOptions);
+
+      li.appendChild(questionTexts);
+      li.appendChild(ol);
+      ol.appendChild(questionsOptionsLi);
+
+      result.appendChild(li);
+    }
+  );
 
   return result;
 }
 
-export default { renderQuestions, renderAnswerOptions, createElAndAtt };
+export function renderQuestions() {
+  document
+    .getElementById("questionsContainer")
+    .replaceChildren(loadElementsQuestions());
+}
+
+export default {
+  renderQuestions,
+  renderAnswerOptions,
+  createElAndAtt,
+  loadElementsQuestions,
+};

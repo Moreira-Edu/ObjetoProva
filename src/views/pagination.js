@@ -1,74 +1,82 @@
-import { renderQuestions, createElAndAtt } from "./render.js";
+import { createElAndAtt } from "./render.js";
 import { Test } from "../data/index.js";
 
-/**
- *
- * @param {number} pageSize  number of items rendered in each page
- * @returns {} switchPage, renderPages
- */
-export function paginate(pageSize) {
-  const totalItems = Test.length;
-  if (!pageSize || pageSize <= 0 || pageSize > totalItems) {
-    pageSize = 1;
-  }
-  /**
-   *
-   * @param {string} text
-   */
-  const switchPage = (text) => {
-    const pages = document.querySelectorAll("[data-page]");
-    pages.forEach((page) => {
-      const changeRegex = new RegExp(page.getAttribute("data-page"));
-      const change = changeRegex.test(text);
-      change ? (page.style.display = "block") : (page.style.display = "none");
-    });
-  };
+export let currentPage = 1;
 
-  const totalPages = Math.ceil(totalItems / pageSize);
-  const renderButtons = () => {
-    const containerSwitch = createElAndAtt("div", {
-      class: "container_switch",
-    });
-    containerSwitch.innerHTML = "";
-    for (let i = 1; i <= totalPages; i++) {
-      const button = createElAndAtt(
-        "button",
-        {
-          ["data-switch"]: `page${i - 1}`,
-          class: "button-switcher",
-        },
-        i
-      );
-
-      containerSwitch.appendChild(button);
-    }
-    return containerSwitch;
-  };
-
-  /**
-   * render pages
-   */
-  const renderPages = () => {
-    const arrTest = [...Test];
-    const container = document.querySelector("#questionsContainer");
-    container.innerHTML = "";
-    const fragment = document.createDocumentFragment();
-    const questionsInHtml = createElAndAtt("ul", { id: "pagination" });
-    const pages = [];
-    for (let i = totalPages; i >= 1; i--) {
-      pages.push(arrTest.splice(0, pageSize));
-    }
-
-    questionsInHtml.appendChild(renderQuestions(pages));
-    fragment.appendChild(questionsInHtml);
-    fragment.appendChild(renderButtons());
-    container.append(fragment);
-
-    switchPage("page0");
-  };
+export function questionsIndexRange(pageNumber) {
+  const pageSize = document.getElementById("questionsQuantity").value;
 
   return {
-    switchPage,
-    renderPages,
+    LastIndex: pageSize * pageNumber,
+    FirtIndex: pageSize * Math.max(--pageNumber, 0),
   };
 }
+
+/**
+ * Function that switch question on dom
+ * @param {string} text
+ */
+export function displayQuestions(pageNumber) {
+  const pageSize = document.getElementById("questionsQuantity").value;
+
+  const questionsIndex = questionsIndexRange(pageNumber);
+  currentPage = pageNumber;
+
+  const questionsToDisplay = Test.slice(
+    questionsIndex.FirtIndex,
+    questionsIndex.LastIndex
+  ).map(({ QuestionId }) => QuestionId);
+
+  document.querySelectorAll("[questionId]").forEach((questionElement) => {
+    if (
+      questionsToDisplay.includes(
+        Number(questionElement.getAttribute("questionId"))
+      )
+    ) {
+      questionElement.setAttribute("class", "visible-question");
+    } else {
+      questionElement.setAttribute("class", "invisible-question");
+    }
+  });
+}
+
+/**
+ * Render pagination
+ * @returns {HTMLElement}
+ */
+export function loadPaginationElement() {
+  const totalPages = Test.length;
+  const pageSize = document.getElementById("questionsQuantity").value;
+  const paginationElement = document.createDocumentFragment();
+
+  for (let i = 1; i <= Math.ceil(totalPages / pageSize); i++) {
+    paginationElement.appendChild(
+      createElAndAtt(
+        "button",
+        {
+          indexButton: i,
+          class: "pagination-item",
+        },
+        {
+          innerHTML: i,
+          eventsListeners: {
+            click: (e) => {
+              e.preventDefault();
+              displayQuestions(i);
+            },
+          },
+        }
+      )
+    );
+  }
+
+  return paginationElement;
+}
+
+export function renderPagination() {
+  document
+    .getElementById("paginationContainer")
+    .replaceChildren(loadPaginationElement());
+}
+
+export default { renderPagination, loadPaginationElement, displayQuestions };

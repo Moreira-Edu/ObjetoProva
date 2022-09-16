@@ -1,0 +1,24 @@
+.pagination{
+    display: flex;
+    width: fit-content;
+
+    background-color: var(--primary-white);
+    border-radius: 0.25rem;
+}
+
+.pagination .pagination-item {
+    height: 2.8rem;
+    width: 2.8rem;
+
+    background-color: transparent;
+    border: none
+}
+
+.pagination-item:hover {
+    cursor: pointer;
+    color: var(--primary-blue);
+}
+
+.pagination-item:focus-within {
+    color: var(--primary-blue);
+}

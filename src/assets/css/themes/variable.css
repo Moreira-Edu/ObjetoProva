@@ -1,0 +1,28 @@
+:root {
+    --primary-black: #303841;
+    --secondary-black: #3A4750;
+
+    --primary-white: #EEEEEE;
+    --secondary-white: #b2bec3;
+
+    --primary-blue: #0984e3;
+    --secondary-blue: #74b9ff;
+    
+    --primary-red: #D72323;
+    --secondary-red: #ff7675;
+
+    --primary-yellow: #fdcb6e;
+    --secondary-yellow: #ffeaa7;
+
+    --primary-green: #00b894;
+    --secondary-green: #55efc4;
+
+    --primary-orange: #fa8231;
+    --secondary-orange: #fd9644;
+
+    --primary-purple: #6c5ce7;
+    --secondary-purple: #a29bfe;
+
+    --primary-pink: #e84393;
+    --secondary-pink: #fd79a8;
+}

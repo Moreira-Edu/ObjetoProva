@@ -1,22 +1,19 @@
-import changePageSize from "./src/helpers/changePageSize.js";
-import switchers from "./src/helpers/switchPage.js";
-
-const pageSize = document.querySelector("#select");
-
-pageSize.addEventListener("change", (e) => {
-  e.preventDefault();
-  changePageSize(e.target.value);
-  switchers();
-});
+import { renderPagination, displayQuestions } from "./src/views/pagination.js";
+import { renderQuestions } from "./src/views/render.js";
+import { Answers } from "./src/data/index.js";
 
 window.addEventListener("load", () => {
-  changePageSize(pageSize.value);
-  switchers();
+  renderQuestions();
+  displayQuestions(1);
+  renderPagination();
 });
 
-function sendAnswers(e) {
-  e.preventDefault();
+document.getElementById("questionsQuantity").addEventListener("change", () => {
+  displayQuestions(1);
+  renderPagination();
+});
 
-  alert("TODO: pegar respostas e checar");
-  // document.querySelector('input[name="question-${questionId}"]:checked').value;
-}
+document.getElementById("send").addEventListener("click", (e) => {
+  e.preventDefault();
+  console.log(Answers);
+});
