@@ -1,11 +1,14 @@
 ## Descreva suas mudanças implementadas na PR
+
 Exemplo:
    - Descreva sua mudança
 
 ## Mídia
-(print- gif - vídeo)
+
+(print - gif - vídeo)
 
 ## Tipo da PR
+
  - [ ] Feature
  - [ ] Fix
 

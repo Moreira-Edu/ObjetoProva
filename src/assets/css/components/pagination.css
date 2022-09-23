@@ -1,24 +1,26 @@
-.pagination{
+.pagination {
     display: flex;
-    width: fit-content;
+    width: 100%;
+    margin-top: 1rem;
+    justify-content: space-between;
+}
 
+.pagination-button {
+    border: 0;
+    border-radius: 80%;
     background-color: var(--primary-white);
-    border-radius: 0.25rem;
-}
-
-.pagination .pagination-item {
-    height: 2.8rem;
-    width: 2.8rem;
-
-    background-color: transparent;
-    border: none
-}
-
-.pagination-item:hover {
+    width: 2.5rem;
+    height: 2.5rem;
     cursor: pointer;
-    color: var(--primary-blue);
 }
 
-.pagination-item:focus-within {
-    color: var(--primary-blue);
+.current-page {
+    color: var(--primary-white) !important;
+    background-color: var(--primary-blue) !important;
+    font-weight: bold;
+}
+
+.pagination-numbers{
+    display: flex;
+    gap: 0.5rem;
 }
