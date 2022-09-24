@@ -1,7 +1,7 @@
 import { createElAndAtt } from "../../utils/htmlHelper.js";
 import { Test } from "../../../store/data/index.js";
 import { markAnswer } from "../../../store/data/answers.js";
-
+import { update } from "../../../views/test/tooltipUpdate.js";
 
 /**
  * Render the Answer Options
@@ -29,6 +29,7 @@ function renderAnswerOptions(questionId, options) {
       eventsListeners: {
         click: () => {
           markAnswer(questionId, id);
+          update();
         },
       },
     });
@@ -55,13 +56,13 @@ function renderQuestion(question) {
   const font = createElAndAtt("small", { innerHTML: Font });
 
   const questionElement = createElAndAtt("li", {
-    attributes: { questionId: QuestionId, class: 'question visible-question' },
+    attributes: { questionId: QuestionId, class: "question visible-question" },
     childElements: [
       createElAndAtt("h3", { innerHTML: `Questão ${QuestionId}` }),
-      QuestionText? createElAndAtt("p", { innerHTML: QuestionText }) : null,
+      QuestionText ? createElAndAtt("p", { innerHTML: QuestionText }) : null,
       createElAndAtt("span", { innerHTML: QuestionEnunciation }),
       renderAnswerOptions(QuestionId, AnswerOptions),
-      Font ? createElAndAtt("small", { innerHTML: Font }) :  null,
+      Font ? createElAndAtt("small", { innerHTML: Font }) : null,
     ],
   });
 

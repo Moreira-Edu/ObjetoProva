@@ -51,4 +51,18 @@ export const Answers = {
 };
 //#endregion
 
-export default { Answers, checkAnswer, markAnswer };
+//total answers checked
+export function checkedAnswers() {
+  const rawValue = Object.values(Answers).filter(
+    (answer) => answer !== undefined
+  ).length;
+
+  return `${((rawValue * 100) / 30).toFixed(2)}%`;
+}
+
+export default {
+  Answers,
+  checkAnswer,
+  markAnswer,
+  checkedAnswers,
+};
