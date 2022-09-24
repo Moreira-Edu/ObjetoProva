@@ -1,7 +1,7 @@
 import { checkedAnswers } from "../../store/data/answers.js";
 import { applyStyles } from "../../components/utils/htmlHelper.js";
 
-export function update() {
+export function tooltipUpdate() {
   const progress = document.querySelector(".progress-bar");
   const progressTooltip = document.querySelector(".progress-tooltip");
   const progressValue = checkedAnswers();

@@ -1,6 +1,9 @@
+import { writeAnswer } from "../../views/test/localStorageModule.js";
+
 //#region getters/setters
 export function markAnswer(questionId, answerId) {
   Answers[questionId] = answerId;
+  writeAnswer(Answers);
 }
 
 /**

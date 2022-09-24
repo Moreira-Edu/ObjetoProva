@@ -1,7 +1,7 @@
 import { createElAndAtt } from "../../utils/htmlHelper.js";
 import { Test } from "../../../store/data/index.js";
+import { tooltipUpdate } from "../../../views/test/tooltipUpdate.js";
 import { markAnswer } from "../../../store/data/answers.js";
-import { update } from "../../../views/test/tooltipUpdate.js";
 
 /**
  * Render the Answer Options
@@ -29,7 +29,7 @@ function renderAnswerOptions(questionId, options) {
       eventsListeners: {
         click: () => {
           markAnswer(questionId, id);
-          update();
+          tooltipUpdate();
         },
       },
     });
