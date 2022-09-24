@@ -137,10 +137,7 @@ main {
 }
 
 .btn {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
+    padding: 0.25rem 0.5rem;
 
   height: 2.5rem;
   width: 8rem;
@@ -154,5 +151,46 @@ main {
   background-color: var(--primary-blue);
   color: var(--primary-white);
 
-  cursor: pointer;
+    cursor: pointer;
+}
+
+small {
+    font-weight: lighter;
+}
+
+.select {
+    position: relative;
+    display: inline;
+}
+
+.select select {
+    border: 0;
+    position: relative;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+    letter-spacing: inherit;
+    padding: 0rem 1rem;
+    cursor: pointer;
+}
+
+.select::after {
+    content: '';
+    position: absolute;
+    background-color: var(--primary-white);
+    height: 2px;
+    width: 46%;
+    left: 54%;
+    top: 100%;
+    margin-right: 20%;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.select:hover::after {
+    transform: scaleX(1);
+}
+
+.select option {
+    color: var(--primary-black);
 }

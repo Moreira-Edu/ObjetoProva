@@ -5,6 +5,17 @@
     justify-content: space-between;
 }
 
+.pagination>button:hover{
+    background-color: var(--primary-blue) !important;
+    color: var(--primary-white);
+    transform: scale(1.1);
+}
+
+.pagination>button{
+    transition: background 100ms linear;
+    transition: transform 100ms linear;
+}
+
 .pagination-button {
     border: 0;
     border-radius: 80%;
