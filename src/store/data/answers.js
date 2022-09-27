@@ -12,13 +12,10 @@ export function markAnswer(questionId, answerId) {
  *
  * @param {number} questionId
  * @param {number} answerId
- * @returns array with question and answer Id
+ * @returns boolean value
  */
 export function markedAnswer(questionId, answerId) {
-  return Object.entries(Answers).find(
-    ([question, answer]) =>
-      questionId === Number(question) && answer === answerId
-  );
+  return Answers[questionId] === answerId;
 }
 
 /**
