@@ -1,4 +1,4 @@
-import { markAnswer } from "./answers.js";
+import { markAnswer } from "./index.js";
 
 export function readAnswers() {
   return JSON.parse(localStorage.getItem("answers"));

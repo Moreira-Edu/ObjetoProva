@@ -2,9 +2,27 @@ import { writeAnswer } from "./localStorageModule.js";
 import { Test } from "./index.js";
 
 //#region getters/setters
+
+/**
+ *  write input value on object Answers and set it on localStorage
+ * @param {number} questionId
+ * @param {number} answerId
+ */
 export function markAnswer(questionId, answerId) {
   Answers[questionId] = answerId;
   writeAnswer(Answers);
+}
+
+/**
+ *
+ * @returns percentual of questions answered
+ */
+export function totalAnswered() {
+  const rawValue = Object.values(Answers).filter(
+    (answer) => answer !== undefined
+  ).length;
+
+  return `${((rawValue * 100) / 30).toFixed(2)}%`;
 }
 
 /**
@@ -66,19 +84,11 @@ export const Answers = {
 };
 //#endregion
 
-//total answers checked
-export function checkedAnswers() {
-  const rawValue = Object.values(Answers).filter(
-    (answer) => answer !== undefined
-  ).length;
-
-  return `${((rawValue * 100) / 30).toFixed(2)}%`;
-}
-
 export default {
   Answers,
   checkAnswer,
   markAnswer,
-  checkedAnswers,
+  totalAnswered,
   markAnswer,
+  markedAnswer,
 };

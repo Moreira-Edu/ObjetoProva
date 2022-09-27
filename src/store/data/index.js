@@ -1,4 +1,10 @@
 import Test from "./test.js";
-import Answers from "./answers.js";
+import {
+  Answers,
+  checkAnswer,
+  markAnswer,
+  markedAnswer,
+  totalAnswered,
+} from "./answers.js";
 
-export { Test, Answers };
+export { Test, Answers, checkAnswer, markAnswer, markedAnswer, totalAnswered };

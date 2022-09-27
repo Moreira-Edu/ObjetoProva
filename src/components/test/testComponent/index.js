@@ -1,7 +1,6 @@
 import { createElAndAtt } from "../../utils/htmlHelper.js";
-import { Test } from "../../../store/data/index.js";
 import { tooltipUpdate } from "../../../views/test/tooltipUpdate.js";
-import { markAnswer, markedAnswer } from "../../../store/data/answers.js";
+import { Test, markAnswer, markedAnswer } from "../../../store/data/index.js";
 
 /**
  * Render the Answer Options
