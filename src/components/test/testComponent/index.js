@@ -1,7 +1,7 @@
 import { createElAndAtt } from "../../utils/htmlHelper.js";
 import { Test } from "../../../store/data/index.js";
 import { tooltipUpdate } from "../../../views/test/tooltipUpdate.js";
-import { markAnswer } from "../../../store/data/answers.js";
+import { markAnswer, markedAnswer } from "../../../store/data/answers.js";
 
 /**
  * Render the Answer Options
@@ -15,6 +15,7 @@ function renderAnswerOptions(questionId, options) {
   });
 
   options.forEach(({ id, AnswerText }) => {
+    const isAnswered = markedAnswer(questionId, id) && { checked: "" };
     const label = createElAndAtt("label", {
       innerHTML: AnswerText,
       attributes: { for: `answer-${id}` },
@@ -25,6 +26,7 @@ function renderAnswerOptions(questionId, options) {
         id: `answer-${id}`,
         name: `question-${questionId}`,
         type: "radio",
+        ...isAnswered,
       },
       eventsListeners: {
         click: () => {

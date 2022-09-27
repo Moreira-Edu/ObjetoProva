@@ -61,6 +61,7 @@ export function swapClass(elToRemove, elToReceive, classToSwap) {
 }
 
 /**
+ * apply styles on element
  *
  * @param {HTMLElement} el
  * @param {object} styleObj

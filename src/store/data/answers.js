@@ -1,9 +1,24 @@
-import { writeAnswer } from "../../views/test/localStorageModule.js";
+import { writeAnswer } from "./localStorageModule.js";
+import { Test } from "./index.js";
 
 //#region getters/setters
 export function markAnswer(questionId, answerId) {
   Answers[questionId] = answerId;
   writeAnswer(Answers);
+}
+
+/**
+ * check wich answers are marked early
+ *
+ * @param {number} questionId
+ * @param {number} answerId
+ * @returns array with question and answer Id
+ */
+export function markedAnswer(questionId, answerId) {
+  return Object.entries(Answers).find(
+    ([question, answer]) =>
+      questionId === Number(question) && answer === answerId
+  );
 }
 
 /**
@@ -13,7 +28,7 @@ export function markAnswer(questionId, answerId) {
  * @returns {Boolean}
  */
 export function checkAnswer(questionId, answerId) {
-  return Test.find(
+  return Test.TestData.find(
     ({ QuestionId }) => questionId === QuestionId
   ).AnswerOptions.find(({ id }) => id === answerId).isCorrect;
 }
@@ -68,4 +83,5 @@ export default {
   checkAnswer,
   markAnswer,
   checkedAnswers,
+  markAnswer,
 };

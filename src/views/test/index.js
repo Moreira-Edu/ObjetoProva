@@ -3,7 +3,7 @@ import {
   renderPagination,
   switchPages,
 } from "../../components/test/pagination/index.js";
-import { updateAnswers } from "./localStorageModule.js";
+import { updateAnswers } from "../../store/data/localStorageModule.js";
 import { tooltipUpdate } from "./tooltipUpdate.js";
 
 const containersReferences = {
@@ -12,10 +12,10 @@ const containersReferences = {
 };
 
 window.addEventListener("load", () => {
+  updateAnswers();
   containersReferences.test.append(RenderTest());
   containersReferences.pagination.append(renderPagination());
   switchPages(1);
-  updateAnswers();
   tooltipUpdate();
 });
 
