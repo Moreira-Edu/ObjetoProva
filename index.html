@@ -4,53 +4,110 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./src/assets\images\logos\favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./src/assets\images\logos\favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="src/assets/css/views/index.css" />
     <title>SimulaOn</title>
   </head>
 
   <body>
-    <header>
-      <img src="./src/assets/images/logos/favicon.ico" alt="Logo" />
-      <h1>Simulado - Concurso Técnico de Enfermagem</h1>
+    <header id="#header" class="header-container">
+      <nav class="header-nav">
+        <li><a class="header-nav--link" href="#exam">Ir para o exame</a></li>
+        <li>
+          <a class="header-nav--link" href="#about-exam">Sobre o projeto</a>
+        </li>
+        <li><a class="header-nav--link" href="#tips">Sobre a prova</a></li>
+        <li><a class="header-nav--link" href="#credits">Créditos</a></li>
+      </nav>
+      <article class="header-text">
+        <h1>Simulado - Concurso Técnico de Enfermagem</h1>
+        <p>
+          Um teste rápido, prático e simples para aqueles que buscam o sucesso
+          na carreira de enfermagem e melhorar seu desempenho nas provas
+        </p>
+      </article>
+      <img
+        src="src/assets/images/images/mainImage.svg"
+        alt="imagem de um estudante astronauta dando joinha"
+      />
     </header>
 
-    <main>
-      <a href="./src/views/test/test.html">Ir ao teste</a>
-      <p>
-        Esse simulado trata - se de uma prova de concurso público de técnico de
-        enfermagem da Prefeitura de Tijucas no Rio de Janeiro de 2021 , ela
-        composta por 30 questões divididas em 4 disciplinas, 5 questões para
-        cada disciplina que são: Língua Portuguesa, Temas de Atualidade, Noções
-        de Informática e as outras 15 questões para Conhecimentos Específicos.
-      </p>
+    <main class="container">
+      <article id="tips" class="exam-tips">
+        <img src="src/assets/images/images/dashboardImage.svg" alt="" />
+        <div>
+          <h3>Como fazer a prova</h3>
+          <p>
+            Ao navegar até a prova você iniciará o teste automaticamente. O
+            layout da prova pode ser customizado para uma ou mais questões. A
+            prova é dividida por tópicos, cada questão contém um enunciado e 5
+            alternativas, sendo uma apenas a verdadeira. Algumas questões podem
+            se apoiar em textos.Conforme responde as questões, uma barra de
+            progresso vai aumentando, ao colocar o mouse por cima dela, você
+            será capaz de saber o percentual de questões respondidas. A prova só
+            poderá ser concluída se todas as questões forem respondidas. Você
+            tem total liberdade de parar a prova no momento em que desejar e
+            retornar depois. Ao finalizar a prova, você será direcionado ao
+            resultado contém o percentual de acertos e o gabarito.
+            <span>Boa Prova!</span>
+          </p>
+        </div>
+      </article>
+      <article id="about-exam" class="about-exam">
+        <img
+          src="src/assets/images/images/ExamImage.svg"
+          alt="imagem de um estudante fazendo prova"
+        />
+        <div>
+          <p>
+            Esse simulado trata-se de uma prova de concurso público de técnico
+            de enfermagem da Prefeitura de Tijucas no Rio de Janeiro de 2021 ,
+            ela composta por 30 questões divididas em 4 disciplinas, 5 questões
+            para cada disciplina que são: Língua Portuguesa, Temas de
+            Atualidade, Noções de Informática e as outras 15 questões para
+            Conhecimentos Específicos.
+          </p>
+          <a href="./src/views/test/test.html">Ir ao teste</a>
+        </div>
+      </article>
     </main>
 
-    <footer>
+    <footer id="credits">
+      <h3>Site desenvolvido Por</h3>
       <ul>
-        <li>Site desenvolvido por:</li>
-        <li>Eduardo da Silva</li>
-        <li>David Sabino</li>
-        <li>Luiz Carlos</li>
-        <li>Matheus Pereira</li>
-        <li>Luiz Felipe</li>
+        <li><a href="">Eduardo da Silva</a></li>
+        <li><a href="">David Sabino</a></li>
+        <li><a href="">Luiz Carlos</a></li>
+        <li><a href="">Matheus Pereira</a></li>
+        <li><a href="">Luiz Felipe</a></li>
       </ul>
 
-      <a
-        href="https://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/"
-        ><img
-          src="src/assets/images/logos/fatec-carapicuiba-logo.png"
-          alt="FatecCarapicuibaLogo"
-      /></a>
-
-      <a href="https://www.saopaulo.sp.gov.br/" target="_blank"
-        ><img
-          src="src/assets/images/logos/governo-do-estado-de-sp-logo.png"
-          alt="GovernoDoEstadoDeSpLogo"
-      /></a>
-
-      <a href="https://www.cps.sp.gov.br/" target="_blank"
-        ><img src="src/assets/images/logos/cps-logo.png" alt="CpsLogo"
-      /></a>
+      <nav class="footer-nav">
+        <li>
+          <a
+            href="https://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/"
+            ><img
+              src="src/assets/images/logos/fatec-carapicuiba-logo.png"
+              alt="logo Fatec Carapicuíba"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.saopaulo.sp.gov.br/" target="_blank"
+            ><img
+              src="src/assets/images/logos/governo-do-estado-de-sp-logo.png"
+              alt="Logo governo do estado de SP"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.cps.sp.gov.br/" target="_blank"
+            ><img src="src/assets/images/logos/cps-logo.png" alt="CpsLogo"
+          /></a>
+        </li>
+      </nav>
     </footer>
   </body>
 </html>
