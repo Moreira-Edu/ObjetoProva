@@ -53,8 +53,10 @@ a:visited {
   left: 125px;
 }
 .header-text > h1 {
+  color: var(--primary-orange);
+  font-weight: 600;
+  text-align: center;
   padding: 1rem;
-  /* border: 2px solid var(--primary-orange); */
   font-size: 2rem;
   border-radius: 25px;
   z-index: 1;
