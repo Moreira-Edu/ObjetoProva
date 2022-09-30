@@ -105,6 +105,7 @@ a:visited {
 .exam-tips div {
   place-self: center;
   display: flex;
+
   gap: 0.5rem;
   flex-direction: column;
 }
@@ -113,6 +114,16 @@ a:visited {
   font-size: 2rem;
   color: var(--primary-orange);
   margin: 0 auto;
+}
+.exam-tips > div > p {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.exam-tips > div > p > span {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--primary-orange);
 }
 .about-exam {
   width: 75%;
@@ -137,6 +148,8 @@ a:visited {
 }
 .about-exam > div > p {
   font-size: 1rem;
+  width: 60%;
+  margin: 0 auto;
   text-align: justify;
   font-weight: 500;
   color: var(--primary-blue);
