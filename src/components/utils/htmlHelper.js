@@ -61,13 +61,13 @@ export function swapClass(elToRemove, elToReceive, classToSwap) {
 }
 
 /**
+ * apply styles on element
  *
  * @param {HTMLElement} el
- * @param {StyleObject} styleObj
+ * @param {object} styleObj
  */
 export const applyStyles = (el, styleObj) => {
-  Object.entries(styleObj).forEach((styleProp) => {
-    console.log(styleProp);
-    el.style[styleProp[0]] = [styleProp[1]];
+  Object.entries(styleObj).forEach(([key, value]) => {
+    el.style[key] = [value];
   });
 };
