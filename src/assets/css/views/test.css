@@ -137,6 +137,10 @@ main {
   display: none;
 }
 
+.btn:disabled {
+  cursor: default;
+  background-color: var(--secondary-black);
+}
 .btn {
   padding: 0.25rem 0.5rem;
 

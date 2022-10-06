@@ -1,5 +1,5 @@
 import { createElAndAtt } from "../../utils/htmlHelper.js";
-import { tooltipUpdate } from "../../../views/test/tooltipUpdate.js";
+import { progressUpdate } from "../../../views/test/progressUpdate.js";
 import { Test, markAnswer, markedAnswer } from "../../../store/data/index.js";
 
 /**
@@ -30,7 +30,7 @@ function renderAnswerOptions(questionId, options) {
       eventsListeners: {
         click: () => {
           markAnswer(questionId, id);
-          tooltipUpdate();
+          progressUpdate();
         },
       },
     });

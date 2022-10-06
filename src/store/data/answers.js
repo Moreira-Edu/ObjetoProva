@@ -22,7 +22,7 @@ export function totalAnswered() {
     (answer) => answer !== undefined
   ).length;
 
-  return `${((rawValue * 100) / 30).toFixed(2)}%`;
+  return ((rawValue * 100) / 30).toFixed(2);
 }
 
 /**

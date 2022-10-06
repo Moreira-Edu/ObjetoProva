@@ -4,7 +4,7 @@ import {
   switchPages,
 } from "../../components/test/pagination/index.js";
 import { updateAnswers } from "../../store/data/localStorageModule.js";
-import { tooltipUpdate } from "./tooltipUpdate.js";
+import { progressUpdate } from "./progressUpdate.js";
 
 const containersReferences = {
   pagination: document.getElementById("paginationContainer"),
@@ -16,7 +16,7 @@ window.addEventListener("load", () => {
   containersReferences.test.append(RenderTest());
   containersReferences.pagination.append(renderPagination());
   switchPages(1);
-  tooltipUpdate();
+  progressUpdate();
 });
 
 document.getElementById("questionsQuantity").addEventListener("change", () => {
