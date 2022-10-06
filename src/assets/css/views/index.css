@@ -112,18 +112,22 @@ footer > h3 {
   font-weight: 700;
   color: var(--primary-orange);
 }
-
-footer > ul {
+.credit-list {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.credit-list > ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   place-self: center;
   font-weight: 500;
 }
-footer > ul > li > a:visited {
+.credit-list > ul > li > a:visited {
   color: var(--primary-blue);
 }
-footer > ul > li > a:hover {
+.credit-list > ul > li > a:hover {
   color: var(--primary-orange);
 }
 .footer-nav {
@@ -152,5 +156,16 @@ footer > ul > li > a:hover {
     align-items: center;
     flex-direction: row;
     gap: 1rem;
+  }
+
+  footer {
+    flex-direction: row;
+    align-content: center;
+  }
+  .credit-list {
+    width: 50%;
+  }
+  .footer-nav {
+    width: 50%;
   }
 }
