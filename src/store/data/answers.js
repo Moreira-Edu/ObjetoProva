@@ -13,6 +13,45 @@ export function markAnswer(questionId, answerId) {
   writeAnswer(Answers);
 }
 
+export function questionPerTopic() {
+  const disciplineType = {
+    portuguese: {
+      topic: "Língua Poruguesa",
+      correct: 0,
+      total: 5,
+    },
+    actuality: {
+      topic: "Temas da Atualidade",
+      correct: 0,
+      total: 5,
+    },
+
+    informatic: {
+      topic: "Noções de Informática",
+      correct: 0,
+      total: 5,
+    },
+
+    specific: {
+      topic: "Noções Específicas",
+      correct: 0,
+      total: 15,
+    },
+  };
+  Test.TestData.forEach(({ QuestionId, DisciplineType, AnswerOptions }) => {
+    AnswerOptions.forEach(({ id, isCorrect }) => {
+      if (Answers[QuestionId] === id && isCorrect) {
+        DisciplineType[0] === "L" && disciplineType.portuguese.correct++;
+        DisciplineType[0] === "T" && disciplineType.actuality.correct++;
+        DisciplineType[0] === "N" && disciplineType.informatic.correct++;
+        DisciplineType[0] === "C" && disciplineType.specific.correct++;
+      }
+    });
+  });
+
+  return disciplineType;
+}
+
 /**
  *
  * @returns percentual of questions answered
@@ -40,7 +79,7 @@ export function markedAnswer(questionId, answerId) {
  * Check if a answer is correct
  * @param {Number} questionId
  * @param {Number} answerId
- * @returns {Boolean}
+ * @returns {boolean}
  */
 export function checkAnswer(questionId, answerId) {
   return Test.TestData.find(

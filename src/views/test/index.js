@@ -5,6 +5,7 @@ import {
 } from "../../components/test/pagination/index.js";
 import { updateAnswers } from "../../store/data/localStorageModule.js";
 import { progressUpdate } from "./progressUpdate.js";
+import { writeResult } from "../../store/data/result.js";
 
 const containersReferences = {
   pagination: document.getElementById("paginationContainer"),
@@ -26,4 +27,6 @@ document.getElementById("questionsQuantity").addEventListener("change", () => {
 
 document.getElementById("send").addEventListener("click", (e) => {
   e.preventDefault();
+  writeResult();
+  window.location = "../charts/charts.html";
 });
