@@ -1,4 +1,5 @@
 /**
+ * return a model chart
  *
  * @param {array} column
  * @param {array} rows
