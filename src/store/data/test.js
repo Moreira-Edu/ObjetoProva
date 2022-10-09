@@ -940,7 +940,7 @@ export const TestData = [
     QuestionId: 22,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
-    QuestionEnunciation: `Sobre a aferição dos sinais vitais, é isCorrect
+    QuestionEnunciation: `Sobre a aferição dos sinais vitais, é correto
       afirmar:`,
     AnswerOptions: [
       {
@@ -1086,7 +1086,7 @@ export const TestData = [
     QuestionId: 25,
     DisciplineType: `Conhecimentos Específicos`,
     QuestionText: ``,
-    QuestionEnunciation: `Sobre os cuidados de higiene e conforto, é isCorrect
+    QuestionEnunciation: `Sobre os cuidados de higiene e conforto, é correto
       afirmar:`,
     AnswerOptions: [
       {

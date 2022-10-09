@@ -1,5 +1,5 @@
 /**
- * return a model chart
+ * draw a model chart
  *
  * @param {array} column
  * @param {array} rows
@@ -12,9 +12,9 @@ export function drawChart(columns, rows, chartType, elId, option) {
     document.getElementById(elId)
   );
   const data = new google.visualization.DataTable();
-  columns.forEach((column) => data.addColumn(column[0], column[1]));
+  columns.forEach((column) => data.addColumn(...column));
   data.addRows(rows);
-  const options = option && { ...option };
+  const options = option && option;
 
   chart.draw(data, options);
 }

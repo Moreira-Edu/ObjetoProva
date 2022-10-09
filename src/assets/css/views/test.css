@@ -136,11 +136,6 @@ main {
 .hidden-question {
   display: none;
 }
-
-.btn:disabled {
-  cursor: default;
-  background-color: var(--secondary-black);
-}
 .btn {
   padding: 0.25rem 0.5rem;
 
@@ -157,6 +152,11 @@ main {
   color: var(--primary-white);
 
   cursor: pointer;
+}
+
+.btn:disabled {
+  cursor: default;
+  background-color: var(--secondary-black);
 }
 
 small {

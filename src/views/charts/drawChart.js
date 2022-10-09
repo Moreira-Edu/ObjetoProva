@@ -1,7 +1,7 @@
 import { getResult } from "../../store/data/index.js";
 import { drawChart } from "./chartModel.js";
 
-export function drawPie() {
+function drawPie() {
   const { absolute } = getResult();
   const column = [
     ["string", "Legenda"],
@@ -13,16 +13,14 @@ export function drawPie() {
       color: "black",
       fontSize: 16,
       bold: true,
-      italic: false,
     },
     is3D: true,
-    chartArea: { width: "50%", height: "75%" },
     legend: "labeled",
   };
   drawChart(column, Object.entries(absolute), "PieChart", "charts", options);
 }
 
-export function drawColumn() {
+function drawColumn() {
   const { perTopic } = getResult();
   const column = [
     ["string", "Tópico"],
@@ -35,9 +33,13 @@ export function drawColumn() {
   });
   const options = {
     title: "Quantidade de acertos e erros por tópico.",
-    chartArea: { width: "50%", height: "50%", backgroundColor: "" },
     legend: "none",
   };
 
   drawChart(column, arrData, "ColumnChart", "charts-n", options);
+}
+
+export function drawCharts() {
+  drawPie();
+  drawColumn();
 }

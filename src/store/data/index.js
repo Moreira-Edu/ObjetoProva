@@ -5,7 +5,6 @@ import {
   markAnswer,
   markedAnswer,
   totalAnswered,
-  questionPerTopic,
 } from "./answers.js";
 import { getResult, writeResult } from "./result.js";
 
@@ -18,5 +17,4 @@ export {
   totalAnswered,
   writeResult,
   getResult,
-  questionPerTopic,
 };
