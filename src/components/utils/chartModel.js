@@ -1,7 +1,7 @@
 /**
  * draw a model chart
  *
- * @param {array} column
+ * @param {array} columns
  * @param {array} rows
  * @param {string} chartType
  * @param {string} elId

@@ -10,7 +10,7 @@ export function writeResult() {
       Corretos: correctAnswer,
       Errados: 30 - correctAnswer,
     },
-    perTopic: questionPerTopic(),
+    perTopic: resultPerTopic(),
   };
   localStorage.setItem("result", JSON.stringify(result));
 }
@@ -19,45 +19,40 @@ export function getResult() {
   return JSON.parse(localStorage.getItem("result"));
 }
 
-function questionPerTopic() {
-  const disciplineType = {
-    portuguese: {
-      topic: "Língua Portuguesa",
-      correct: 0,
-      total: 5,
-    },
-    actuality: {
-      topic: "Temas de Atualidade",
-      correct: 0,
-      total: 5,
-    },
-
-    informatic: {
-      topic: "Noções de Informática",
-      correct: 0,
-      total: 5,
-    },
-
-    specific: {
-      topic: "Conhecimentos Específicos",
-      correct: 0,
-      total: 15,
-    },
+function resultPerTopic() {
+  const portuguese = {
+    topic: "Língua Portuguesa",
+    correct: 0,
+    total: 5,
   };
+  const actuality = {
+    topic: "Temas de Atualidade",
+    correct: 0,
+    total: 5,
+  };
+
+  const informatic = {
+    topic: "Noções de Informática",
+    correct: 0,
+    total: 5,
+  };
+
+  const specific = {
+    topic: "Conhecimentos Específicos",
+    correct: 0,
+    total: 15,
+  };
+
   Test.TestData.forEach(({ QuestionId, DisciplineType, AnswerOptions }) => {
     AnswerOptions.forEach(({ id, isCorrect }) => {
       if (Answers[QuestionId] === id && isCorrect) {
-        DisciplineType === disciplineType.portuguese.topic &&
-          disciplineType.portuguese.correct++;
-        DisciplineType === disciplineType.actuality.topic &&
-          disciplineType.actuality.correct++;
-        DisciplineType === disciplineType.informatic.topic &&
-          disciplineType.informatic.correct++;
-        DisciplineType === disciplineType.specific.topic &&
-          disciplineType.specific.correct++;
+        DisciplineType === portuguese.topic && portuguese.correct++;
+        DisciplineType === actuality.topic && actuality.correct++;
+        DisciplineType === informatic.topic && informatic.correct++;
+        DisciplineType === specific.topic && specific.correct++;
       }
     });
   });
 
-  return disciplineType;
+  return { portuguese, actuality, informatic, specific };
 }

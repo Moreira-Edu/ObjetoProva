@@ -1,4 +1,4 @@
-import { drawCharts } from "./drawChart.js";
+import { drawCharts } from "../../components/chart/drawChart.js";
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawCharts);
 

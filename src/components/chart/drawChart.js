@@ -1,5 +1,5 @@
 import { getResult } from "../../store/data/index.js";
-import { drawChart } from "./chartModel.js";
+import { drawChart } from "../utils/chartModel.js";
 
 function drawPie() {
   const { absolute } = getResult();
@@ -17,6 +17,7 @@ function drawPie() {
     is3D: true,
     legend: "labeled",
   };
+
   drawChart(column, Object.entries(absolute), "PieChart", "charts", options);
 }
 
