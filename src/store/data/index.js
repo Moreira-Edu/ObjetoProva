@@ -7,6 +7,7 @@ import {
   totalAnswered,
 } from "./answers.js";
 import { getResult, writeResult } from "./result.js";
+import { createStatistic } from "./questionStatistics.js";
 
 export {
   Test,
@@ -17,4 +18,5 @@ export {
   totalAnswered,
   writeResult,
   getResult,
+  createStatistic,
 };

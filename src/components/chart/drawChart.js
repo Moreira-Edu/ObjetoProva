@@ -1,4 +1,4 @@
-import { getResult } from "../../store/data/index.js";
+import { createStatistic, getResult } from "../../store/data/index.js";
 import { drawChart } from "../utils/chartModel.js";
 
 function drawPie() {
@@ -8,7 +8,7 @@ function drawPie() {
     ["number", "porcentagem"],
   ];
   const options = {
-    title: "Quantidade de acertos e erros totais",
+    title: "Aproveitamento da prova",
     titleTextStyle: {
       color: "black",
       fontSize: 16,
@@ -19,6 +19,34 @@ function drawPie() {
   };
 
   drawChart(column, Object.entries(absolute), "PieChart", "charts", options);
+}
+
+function drawStack() {
+  const randomStatistic = ["Alternativas", ...createStatistic()];
+
+  const column = [
+    ["string", "Alternativas"],
+    ["number", "a"],
+    ["number", "b"],
+    ["number", "c"],
+    ["number", "d"],
+    ["number", "e"],
+  ];
+  const options = {
+    title: "Porcentagem de alternativas selecionadas",
+    height: 100,
+    legend: "bottom",
+    animation: {
+      startup: true,
+      duration: 800,
+      easing: "out",
+    },
+    backgroundColor: "transparent",
+    bar: { groupWidth: "15%" },
+    isStacked: true,
+  };
+
+  drawChart(column, [randomStatistic], "BarChart", "charts-1", options);
 }
 
 function drawColumn() {
@@ -35,6 +63,11 @@ function drawColumn() {
   const options = {
     title: "Quantidade de acertos e erros por tópico.",
     legend: "none",
+    animation: {
+      startup: true,
+      duration: 800,
+      easing: "out",
+    },
   };
 
   drawChart(column, arrData, "ColumnChart", "charts-n", options);
@@ -43,4 +76,5 @@ function drawColumn() {
 export function drawCharts() {
   drawPie();
   drawColumn();
+  drawStack();
 }
