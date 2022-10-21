@@ -1,28 +1,17 @@
 :root {
-    --primary-black: #303841;
-    --secondary-black: #3A4750;
+ --primary-themeColor: #0bda51;
+ /* Malachite: https://www.colorhexa.com/0bda51 */
+ --secondary-themeColor: #161616;
+ /* Very dark gray (mostly black): https://www.colorhexa.com/161616 */
+ --tertiary-themeColor: #fafafa;
+ /* Very light gray (mostly white): https://www.colorhexa.com/fafafa */
 
-    --primary-white: #EEEEEE;
-    --secondary-white: #b2bec3;
+--success-primary: #24d824;
+--success-secondary: #199619;
 
-    --primary-blue: #0984e3;
-    --secondary-blue: #74b9ff;
-    
-    --primary-red: #D72323;
-    --secondary-red: #ff7675;
+--danger-primary: #d92424;
+--danger-secondary: #961919;
 
-    --primary-yellow: #fdcb6e;
-    --secondary-yellow: #ffeaa7;
-
-    --primary-green: #00b894;
-    --secondary-green: #55efc4;
-
-    --primary-orange: #fa8231;
-    --secondary-orange: #fd9644;
-
-    --primary-purple: #6c5ce7;
-    --secondary-purple: #a29bfe;
-
-    --primary-pink: #e84393;
-    --secondary-pink: #fd79a8;
+--warning-primary: #ffed48;
+--warning-secondary: #fae100;
 }
