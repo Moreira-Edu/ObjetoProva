@@ -64,6 +64,22 @@ a:visited {
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
   }
 }
+@keyframes pulse-green {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(72, 239, 11, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
 @keyframes pencil {
   0% {
     transform: rotate(-45deg);
@@ -93,6 +109,9 @@ a:visited {
   width: 100%;
   background-color: var(--secondary-themeColor);
 }
+.header-container .container {
+  height: fit-content;
+}
 
 .header-container > .container::after {
   content: "";
@@ -100,12 +119,13 @@ a:visited {
   position: absolute;
   border-radius: 50%;
   height: 50%;
-  max-height: 300px;
-  width: 40%;
+  max-height: 200px;
+  width: 60%;
   max-width: 500px;
   background-color: var(--primary-themeColor);
   transform: rotate(105deg);
   z-index: 0;
+  animation: pulse-green 2s infinite;
 }
 .header-container .title {
   color: var(--primary-themeColor);
@@ -148,7 +168,7 @@ a:visited {
 .logo-slide {
   display: none;
   overflow: hidden;
-  font-size: 3.5rem;
+  font-size: 3rem;
   align-items: flex-end;
   padding-bottom: 0.5rem;
 }
@@ -161,6 +181,7 @@ a:visited {
 
 .logo-slide span:nth-child(2) {
   color: var(--primary-themeColor);
+  font-size: 5rem;
 }
 
 .logo-container:hover .logo-slide span {
@@ -205,6 +226,7 @@ a:visited {
   width: 300px;
   place-self: center;
   display: flex;
+  margin: 0 auto;
 }
 .exam-container img {
   height: 200px;
@@ -264,7 +286,7 @@ a:visited {
   box-shadow: 3px 9px 15px 5px var(--secondary-themeColor);
   padding: 0.5rem;
   border-radius: 12px;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .text-wrap .title {
@@ -357,12 +379,11 @@ footer > p span {
 .footer-nav {
   width: 100%;
   gap: 0.4rem;
-  border-radius: 24px;
-  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 .footer-nav li {
   background-color: var(--tertiary-themeColor);
@@ -384,6 +405,7 @@ footer > p span {
 @media screen and (min-width: 900px) {
   .header-container > .container::after {
     transform: rotate(15deg);
+    max-height: 400px;
   }
   header > .container {
     justify-content: start;
@@ -403,6 +425,9 @@ footer > p span {
     flex-direction: row;
     width: 100%;
     gap: 1rem;
+  }
+  .text-wrap {
+    width: 80%;
   }
 
   footer {
