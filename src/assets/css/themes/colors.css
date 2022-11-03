@@ -1,17 +1,17 @@
 :root {
- --primary-themeColor: #0bda51;
- /* Malachite: https://www.colorhexa.com/0bda51 */
- --secondary-themeColor: #161616;
- /* Very dark gray (mostly black): https://www.colorhexa.com/161616 */
- --tertiary-themeColor: #fafafa;
- /* Very light gray (mostly white): https://www.colorhexa.com/fafafa */
+  --primary-themeColor: #0bda51;
+  /* Malachite: https://www.colorhexa.com/0bda51 */
+  --secondary-themeColor: #161616;
+  /* Very dark gray (mostly black): https://www.colorhexa.com/161616 */
+  --tertiary-themeColor: #fafafa;
+  /* Very light gray (mostly white): https://www.colorhexa.com/fafafa */
 
---success-primary: #24d824;
---success-secondary: #199619;
+  --success-primary: #24d824;
+  --success-secondary: #199619;
 
---danger-primary: #d92424;
---danger-secondary: #961919;
+  --danger-primary: #d92424;
+  --danger-secondary: #961919;
 
---warning-primary: #ffed48;
---warning-secondary: #fae100;
+  --warning-primary: #ffed48;
+  --warning-secondary: #fae100;
 }

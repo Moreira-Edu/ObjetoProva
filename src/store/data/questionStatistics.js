@@ -1,6 +1,6 @@
 /**
  *
- * @returns {array} array of random numbers mocking a percentage of alternatives answereds
+ * @returns {[number]} array of random numbers mocking a percentage of alternatives answereds
  */
 function clickedAnswers() {
   const result = [];

@@ -9,24 +9,35 @@
       href="./src/assets\images\logos\favicon.ico"
       type="image/x-icon"
     />
+    <link rel="stylesheet" href="src/assets/css/components/carousel.css" />
     <link rel="stylesheet" href="src/assets/css/views/index.css" />
     <title>SimulaOn</title>
   </head>
 
   <body>
     <header id="#header" class="header-container">
-      <nav class="header-nav">
-        <li><a class="header-nav--link" href="#exam">Ir para o exame</a></li>
-        <li><a class="header-nav--link" href="#tips">Sobre a prova</a></li>
-        <li><a class="header-nav--link" href="#credits">Créditos</a></li>
-      </nav>
+      <div class="header-content">
+        <div class="logo-container">
+          <p>S<span></span></p>
+          <p class="logo-slide"><span>imula</span><span>ON</span></p>
+        </div>
+        <nav class="header-nav">
+          <ul>
+            <li>
+              <a class="header-nav--link" href="#exam">Ir para o exame</a>
+            </li>
+            <li><a class="header-nav--link" href="#tips">Sobre a prova</a></li>
+            <li><a class="header-nav--link" href="#credits">Créditos</a></li>
+          </ul>
+        </nav>
+      </div>
       <article class="container">
         <img
           class="container-img"
           src="src/assets/images/images/mainImage.svg"
           alt="Imagem de astronauta"
         />
-        <h1 class="title">Simulado - Concurso Técnico de Enfermagem</h1>
+        <h1 class="title">SimulaOn - Concurso Técnico de Enfermagem</h1>
         <p class="container-text">
           Um teste rápido, prático e simples para aqueles que buscam o sucesso
           na carreira de enfermagem e melhorar seu desempenho nas provas
@@ -36,43 +47,79 @@
 
     <main>
       <article id="tips" class="container">
-        <img
-          class="container-img"
-          src="src/assets//images/images/dashboardImage.svg"
-          alt="image de um homem analisando uma dashboard"
-        />
-        <div class="text-wrap">
+        <div class="carousel-container">
           <h3 class="title">Como fazer a prova</h3>
-          <p class="container-text">
-            Ao navegar até a prova você iniciará o teste automaticamente. O
-            layout da prova pode ser customizado para uma ou mais questões. A
-            prova é dividida por tópicos, cada questão contém um enunciado e 5
-            alternativas, sendo uma apenas a verdadeira. Algumas questões podem
-            se apoiar em textos. <br />
-            Conforme responde as questões, uma barra de progresso vai
-            aumentando, ao colocar o mouse por cima dela, você será capaz de
-            saber o percentual de questões respondidas. A prova só poderá ser
-            concluída se todas as questões forem respondidas. Você tem total
-            liberdade de parar a prova no momento em que desejar e retornar
-            depois. Ao finalizar a prova, você será direcionado ao resultado
-            contendo o percentual de acertos e gabarito.
-          </p>
+          <input type="radio" name="slider" id="slide-1" checked />
+          <input type="radio" name="slider" id="slide-2" />
+          <input type="radio" name="slider" id="slide-3" />
+          <div class="cards">
+            <label for="slide-1" class="card" id="text-1">
+              <p>
+                <span>1.</span> Ao navegar até a prova você iniciará o teste
+                automaticamente. O layout da prova pode ser customizado para uma
+                ou mais questões. A prova é dividida por tópicos, cada questão
+                contém um enunciado e 5 alternativas, sendo uma apenas a
+                verdadeira. Algumas questões podem se apoiar em textos.
+              </p>
+            </label>
+            <label for="slide-2" class="card" id="text-2">
+              <p>
+                <span>2.</span> Conforme responde as questões, uma barra de
+                progresso vai aumentando, ao colocar o mouse por cima dela, você
+                será capaz de saber o percentual de questões respondidas. A
+                prova só poderá ser concluída se todas as questões forem
+                respondidas.
+              </p>
+            </label>
+            <label for="slide-3" class="card" id="text-3">
+              <p>
+                <span>3.</span> Você tem total liberdade de parar a prova no
+                momento em que desejar e retornar depois. Ao finalizar a prova,
+                você será direcionado ao resultado contendo o percentual de
+                acertos e gabarito.
+              </p>
+            </label>
+          </div>
         </div>
+        <img
+          src="src/assets/images/images/dashboardImage.svg"
+          class="container-img"
+          alt="pessoa avaliando uma dashboard"
+        />
       </article>
       <article id="exam" class="container">
-        <div class="text-wrap">
-          <h3 class="title">Sobre o Simulado</h3>
-          <p class="container-text">
-            Esse simulado trata-se de uma prova de concurso público de técnico
-            de enfermagem da Prefeitura de Tijucas no Rio de Janeiro de 2021 ,
-            ela composta por 30 questões divididas em 4 disciplinas, 5 questões
-            para cada disciplina que são: Língua Portuguesa, Temas de
-            Atualidade, Noções de Informática e as outras 15 questões para
-            Conhecimentos Específicos.
-            <br />
-            <span>Boa Prova!</span>
-          </p>
-          <a class="exam-btn" href="./src/views/test/test.html">Ir ao exame</a>
+        <div>
+          <div class="text-wrap">
+            <h3 class="title">Sobre o Simulado</h3>
+            <p class="container-text">
+              Esse simulado se trata de uma prova de concurso público de técnico
+              de enfermagem da Prefeitura de Tijucas no Rio de Janeiro de 2021 ,
+              ela composta por 30 questões divididas em 4 disciplinas, 5
+              questões para cada disciplina que são: Língua Portuguesa, Temas de
+              Atualidade, Noções de Informática e as outras 15 questões para
+              Conhecimentos Específicos.
+              <br />
+              <span>Boa Prova!</span>
+            </p>
+          </div>
+
+          <div class="exam-container">
+            <div>
+              <img
+                class="book"
+                src="src/assets/images/images/book.svg"
+                alt="imagem de livro"
+              />
+              <a class="exam-btn" href="./src/views/test/test.html"
+                >Ir ao exame</a
+              >
+            </div>
+            <img
+              class="pencil"
+              src="src/assets/images/images/pencil.svg"
+              alt="imagem de lápis"
+            />
+          </div>
         </div>
         <img
           class="container-img"
@@ -83,41 +130,87 @@
     </main>
 
     <footer id="credits">
-      <div class="credit-list">
-        <h3 class="title">Site desenvolvido Por:</h3>
-
-        <ul>
-          <li><a href="#">Eduardo Moreira</a></li>
-          <li><a href="#">David Sabino</a></li>
-          <li><a href="#">Luiz Carlos</a></li>
-          <li><a href="#">Matheus Pereira</a></li>
-          <li><a href="#">Luiz Felipe</a></li>
-        </ul>
+      <div>
+        <div class="credit-list">
+          <nav>
+            <h3 class="title">Desenvolvedores:</h3>
+            <ul>
+              <li>
+                <p href="#">Eduardo Moreira</p>
+                <div>
+                  <img
+                    src="src/assets/images/logos/github.svg"
+                    alt="Logo do github"
+                  /><img
+                    src="src/assets/images/logos/linkedin.svg"
+                    alt="logo do linkedin"
+                  />
+                </div>
+              </li>
+              <li>
+                <p href="#">Luiz Carlos</p>
+                <div>
+                  <img
+                    src="src/assets/images/logos/github.svg"
+                    alt="logo do github"
+                  /><img
+                    src="src/assets/images/logos/linkedin.svg"
+                    alt="logo do linkedin"
+                  />
+                </div>
+              </li>
+              <li>
+                <p href="#">Luiz Felipe</p>
+                <div>
+                  <img
+                    src="src/assets/images/logos/github.svg"
+                    alt="logo do github"
+                  /><img
+                    src="src/assets/images/logos/linkedin.svg"
+                    alt="logo do linkedin"
+                  />
+                </div>
+              </li>
+              <li>
+                <p href="#">Matheus Pereira</p>
+                <div>
+                  <img
+                    src="src/assets/images/logos/github.svg"
+                    alt="logo do github"
+                  /><img
+                    src="src/assets/images/logos/linkedin.svg"
+                    alt="logo do linkedin"
+                  />
+                </div>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <nav class="footer-nav">
+          <li>
+            <a
+              target="blank"
+              href="https://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/"
+              ><img
+                src="src/assets/images/logos/fatec.svg"
+                alt="logo Fatec Carapicuíba"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.saopaulo.sp.gov.br/" target="blank"
+              ><img
+                src="src/assets/images/logos/spgov-logo.svg"
+                alt="Logo governo do estado de SP"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.cps.sp.gov.br/" target="blank"
+              ><img src="src/assets/images/logos/cps-logo.svg" alt="CpsLogo"
+            /></a>
+          </li>
+        </nav>
       </div>
-
-      <nav class="footer-nav">
-        <li>
-          <a
-            target="blank"
-            href="https://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/"
-            ><img
-              src="src/assets/images/logos/fatec.svg"
-              alt="logo Fatec Carapicuíba"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.saopaulo.sp.gov.br/" target="blank"
-            ><img
-              src="src/assets/images/logos/spgov-logo.svg"
-              alt="Logo governo do estado de SP"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.cps.sp.gov.br/" target="blank"
-            ><img src="src/assets/images/logos/cps-logo.svg" alt="CpsLogo"
-          /></a>
-        </li>
-      </nav>
+      <p>Feito com carinho pela equipe 4 <span>&#10084;</span></p>
     </footer>
   </body>
 </html>
