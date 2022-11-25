@@ -1,20 +1,15 @@
-import { createElAndAtt } from "../../utils/htmlHelper.js";
-import { progressUpdate } from "../../../views/test/progressUpdate.js";
-import { Test, markAnswer, markedAnswer } from "../../../store/data/index.js";
+import { createElAndAtt } from "../utils/htmlHelper.js";
+import { Test, markAnswer, markedAnswer } from "../../store/data/index.js";
+import { progressUpdate } from "../../views/test/progressUpdate.js";
 
-/**
- * Render the Answer Options
- * @param {Number} questionId Question identifier
- * @param {Array} options All alternatives
- * @returns {HTMLElement}
- */
 function renderAnswerOptions(questionId, options) {
-  const answersElement = createElAndAtt("ol", {
-    attributes: { class: "answers-options" },
+  const answersElement = createElAndAtt("ul", {
+    attributes: { class: "question-answer" },
   });
 
   options.forEach(({ id, AnswerText }) => {
     const isAnswered = markedAnswer(questionId, id) && { checked: "" };
+
     const label = createElAndAtt("label", {
       innerHTML: AnswerText,
       attributes: { for: `answer-${id}` },
@@ -53,17 +48,29 @@ function renderQuestion(question) {
     Font,
   } = question;
 
-  const text = createElAndAtt("p", { innerHTML: QuestionText });
-  const font = createElAndAtt("small", { innerHTML: Font });
+  const questionNumber = createElAndAtt("h1", { innerHTML: QuestionId });
+  const questionText = createElAndAtt("p", {
+    innerHTML: QuestionText,
+    attributes: { class: "text" },
+  });
+  const questionEnunciation = createElAndAtt("p", {
+    innerHTML: QuestionEnunciation,
+  });
+  const questionFont = createElAndAtt("small", { innerHTML: Font });
 
   const questionElement = createElAndAtt("li", {
     attributes: { questionId: QuestionId, class: "question visible-question" },
     childElements: [
-      createElAndAtt("h3", { innerHTML: `Questão ${QuestionId}` }),
-      QuestionText ? createElAndAtt("p", { innerHTML: QuestionText }) : null,
-      createElAndAtt("span", { innerHTML: QuestionEnunciation }),
+      createElAndAtt("div", {
+        attributes: { class: "question-text" },
+        childElements: [
+          questionNumber,
+          QuestionText ? questionText : null,
+          questionEnunciation,
+        ],
+      }),
       renderAnswerOptions(QuestionId, AnswerOptions),
-      Font ? createElAndAtt("small", { innerHTML: Font }) : null,
+      Font ? questionFont : null,
     ],
   });
 
@@ -76,6 +83,13 @@ function renderTest() {
   Test.TestData.forEach((question) => {
     TestElements.appendChild(renderQuestion(question));
   });
+
+  TestElements.appendChild(
+    createElAndAtt("button", {
+      attributes: { id: "send", class: "send-button", disabled:true },
+      innerHTML: "Enviar",
+    })
+  );
 
   return TestElements;
 }
