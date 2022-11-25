@@ -12,6 +12,7 @@ body {
 }
 
 a {
+  color: var(--tertiary-themeColor);
   text-decoration: none;
 }
 a:visited {
