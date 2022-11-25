@@ -319,3 +319,8 @@ main {
   color: var(--success-primary);
   font-weight: bold;
 }
+
+label {
+  padding: 0.5rem;
+  cursor: pointer;
+}
