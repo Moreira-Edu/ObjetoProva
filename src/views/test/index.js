@@ -1,32 +1,32 @@
-import RenderTest from "../../components/test/testComponent/index.js";
-import {
-  renderPagination,
-  switchPages,
-} from "../../components/test/pagination/index.js";
+import RenderTest from "../../components/test/testComponent.js";
 import { updateAnswers } from "../../store/data/localStorageModule.js";
 import { progressUpdate } from "./progressUpdate.js";
-import { writeResult } from "../../store/data/result.js";
+import { correctAnswers } from "../../store/data/answers.js";
 
 const containersReferences = {
-  pagination: document.getElementById("paginationContainer"),
-  test: document.getElementById("questionsContainer"),
+  test: document.getElementById("TestContainer"),
+  // pagination: document.getElementById(),
 };
 
 window.addEventListener("load", () => {
   updateAnswers();
   containersReferences.test.append(RenderTest());
-  containersReferences.pagination.append(renderPagination());
-  switchPages(1);
   progressUpdate();
-});
 
-document.getElementById("questionsQuantity").addEventListener("change", () => {
-  containersReferences.pagination.replaceChildren(renderPagination());
-  switchPages(1);
-});
+  document.getElementById("send").addEventListener("click", () => {
+    document.getElementsByTagName("main")[0].style =
+      "grid-template-columns: 50% 50%;";
+    document.getElementById("send").setAttribute("disabled", true);
+    Array.from(document.getElementsByTagName("input")).forEach((input) => {
+      input.setAttribute("disabled", true);
+    });
+    Array.from(document.getElementsByTagName("label")).forEach((label) => {
+      label.className = "wrong-answer";
+    });
+    correctAnswers().forEach((id) => {
+        document.querySelectorAll(`[for="${id}"]`)[0].className = "correct-answer"
+    })
 
-document.getElementById("send").addEventListener("click", (e) => {
-  e.preventDefault();
-  writeResult();
-  window.location = "../charts/charts.html";
+    containersReferences.test.scrollTo(0,0)
+  });
 });

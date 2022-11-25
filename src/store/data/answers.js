@@ -84,6 +84,17 @@ export const Answers = {
 };
 //#endregion
 
+export const correctAnswers = () => {
+  let correctAnswersIds = [];
+  Test.TestData.forEach(({ AnswerOptions }) => {
+    AnswerOptions.forEach(({ id, isCorrect }) => {
+      if (isCorrect) correctAnswersIds.push(`answer-${id}`);
+    });
+  });
+
+  return correctAnswersIds
+};
+
 export default {
   Answers,
   checkAnswer,

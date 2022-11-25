@@ -1,45 +1,61 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<link>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Test</title>
-<link rel="icon" type="image/x-icon" href="../../../src/assets/images/logos/Brasao_tijucas.ico">
-<link rel="stylesheet" href="../../../src/assets/css/components/all.css">
-<link rel="stylesheet" href="../../../src/assets/css/themes/all.css">
-<link rel="stylesheet" href="../../../src/assets/css/views/test.css">
-<script type="module" defer src="index.js"></script>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/src/assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/src/assets/css/views/test.css" />
+  <script type="module" src="index.js"></script>
+  <title>SimulaOn - Teste</title>
 </head>
 
 <body>
+  <header>
+    <div class="logo-container">
+      <a class="logo" href="/index.html">
+        <span>S</span>
+      </a>
+      <div class="logo-extended">
+        <span>imula</span><span>ON</span>
+      </div>
+    </div>
+  </header>
   <main>
-    <div class="card">
-      <div class="topbar-card">
-        <div class="select">
-          <label for="testQuantity">Quantidade de questões</label>
-          <select name="testQuantity" id="questionsQuantity">
-            <option selected value="1">Uma questão</option>
-            <option value="5">Cinco questões</option>
-            <option value="30">Todas questões</option>
-          </select>
-        </div>
-        <div class="progress-bar"><span class="progress-tooltip"></span></div>
-
-      </div>
-      <div class="card-content">
-        <ol id="questionsContainer">
-          <!--HTML generated via script-->
-        </ol>
-      </div>
+    <div id="TestContainer">
+    
     </div>
-    <div class="pagination" id="paginationContainer">
-      <!--HTML generated via script-->
-    </div>
-    <div id="testActions">
-      <input class="btn" id="send" disabled type="button" value="Enviar">
-    </div>
+    <div id="ResultsContainer">a</div>
   </main>
+  <div class="progress-area">
+    <div class="progress-bar"></div>
+    <div class="progress-tooltip">Penes</div>
+  </div>
+  <footer>
+    <div class="credits">
+      <a href="/src/views/credit-card/credit.html#eduardomoreira">Eduardo Moreira</a>
+      <a href="/src/views/credit-card/credit.html#luizcarlos">Luiz Carlos</a>
+      <a href="/src/views/credit-card/credit.html#mateuspereira">Matheus Pereira</a>
+    </div>
+    <div class="external-logos">
+      <a href="https://www.cps.sp.gov.br/" target="blank">
+        <img src="/src/assets/images/logos/cps-low-logo.png" alt="Logo Centro Paula Souza">
+      </a>
+      <a target="blank" href="https://www.fateccarapicuiba.edu.br/analise-e-desenvolvimento-de-sistemas/">
+        <img src="/src/assets/images/logos/fatec-low-logo.jpg"
+          alt="Logo Fatec (Faculdade de Tecnologia do Estado de São Paulo)">
+      </a>
+      <a href="https://www.saopaulo.sp.gov.br/" target="blank">
+        <img src="/src/assets/images/logos/sp-low-log.png" alt="Logo Governo do estado de São Paulo">
+      </a>
+    </div>
+  </footer>
+  <div class="group-message">
+    <span>Feito com muito</span>
+    <span class="heart-beat">❤️</span>
+    <span>pela equipe 4.</span>
+  </div>
 </body>
 
 </html>
