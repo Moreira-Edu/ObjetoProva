@@ -9,7 +9,6 @@ const containersReferences = {
   test: document.getElementById("TestContainer"),
   // pagination: document.getElementById(),
 };
-
 window.addEventListener("load", () => {
   updateAnswers();
   containersReferences.test.append(RenderTest());
