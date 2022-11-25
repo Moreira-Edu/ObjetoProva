@@ -19,14 +19,14 @@ if (!checkNames(window.location.hash.slice(1))) {
 
 import { createElAndAtt } from "../../components/utils/htmlHelper.js";
 
-const githubIcon = "/src/assets/images/logos/github-alternative.svg";
-const linkedinIcon = "/src/assets/images/logos/linkedin-alternative.svg";
-const emailIcon = "/src/assets/images/logos/email-icon.svg";
+const githubIcon = "../../assets/images/logos/github-alternative.svg";
+const linkedinIcon = "../../assets/images/logos/linkedin-alternative.svg";
+const emailIcon = "../../assets/images/logos/email-icon.svg";
 
 const bio = {
   mateuspereira: {
     name: "Mateus Pereira",
-    img: "/src/assets/images/images/mateus.jpg",
+    img: "../../assets/images/images/mateus.jpg",
     quote: "O impossível é só questão de opinião",
     from: "Charlie Brown Jr",
     links: [
@@ -39,7 +39,7 @@ const bio = {
   },
   eduardomoreira: {
     name: "Eduardo Moreira",
-    img: "/src/assets/images/images/eduardo.png",
+    img: "../../assets/images/images/eduardo.png",
     quote: "O pessimismo da inteligência não deve abalar o otimismo da vontade",
     from: "Romain Rolland",
     links: [
@@ -50,7 +50,7 @@ const bio = {
   },
   luizcarlos: {
     name: "Luiz Carlos",
-    img: "/src/assets/images/images/luiz.jpg",
+    img: "../../assets/images/images/luiz.jpg",
     quote:
       "God gave us eyes at the front of our heads so we can look forwards to the future",
     from: "Kamina",
@@ -77,7 +77,7 @@ const quoteFromContainer = document.getElementById("quoteFrom");
 const linksContainer = document.getElementById("card-links");
 const backgroundContainer = document.getElementById("card-background");
 
-backgroundContainer.style.backgroundImage = `url('/src/assets/images/images/landscapes/landscape (${Math.floor(
+backgroundContainer.style.backgroundImage = `url('../../assets/images/images/landscapes/landscape (${Math.floor(
   Math.random() * 9
 )}).jpg')`;
 imgContainer.src = img;
