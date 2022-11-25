@@ -1,7 +1,7 @@
 import { createElAndAtt } from "../utils/htmlHelper.js";
 import { Test, markAnswer, markedAnswer } from "../../store/data/index.js";
 import { progressUpdate } from "../../views/test/progressUpdate.js";
-
+let id = 1;
 function renderAnswerOptions(questionId, options) {
   const answersElement = createElAndAtt("ul", {
     attributes: { class: "question-answer" },
@@ -71,6 +71,9 @@ function renderQuestion(question) {
       }),
       renderAnswerOptions(QuestionId, AnswerOptions),
       Font ? questionFont : null,
+      createElAndAtt("div", {
+        attributes: { id: `statistic${id++}`, class: "statistic" },
+      }),
     ],
   });
 
@@ -86,7 +89,7 @@ function renderTest() {
 
   TestElements.appendChild(
     createElAndAtt("button", {
-      attributes: { id: "send", class: "send-button", disabled:true },
+      attributes: { id: "send", class: "send-button", disabled: true },
       innerHTML: "Enviar",
     })
   );

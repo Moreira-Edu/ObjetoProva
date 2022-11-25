@@ -18,10 +18,10 @@ function drawPie() {
     legend: "labeled",
   };
 
-  drawChart(column, Object.entries(absolute), "PieChart", "charts", options);
+  drawChart(column, Object.entries(absolute), "PieChart", "pieChart", options);
 }
 
-function drawStack() {
+export function drawStack(elId) {
   const randomStatistic = ["Alternativas", ...createStatistic()];
 
   const column = [
@@ -35,18 +35,19 @@ function drawStack() {
   const options = {
     title: "Porcentagem de alternativas selecionadas",
     height: 100,
+    width: 700,
     legend: "bottom",
     animation: {
       startup: true,
-      duration: 800,
-      easing: "out",
+      duration: 2000,
+      easing: "in",
     },
     backgroundColor: "transparent",
     bar: { groupWidth: "15%" },
     isStacked: true,
   };
 
-  drawChart(column, [randomStatistic], "BarChart", "charts-1", options);
+  drawChart(column, [randomStatistic], "BarChart", elId, options);
 }
 
 function drawColumn() {
@@ -70,11 +71,12 @@ function drawColumn() {
     },
   };
 
-  drawChart(column, arrData, "ColumnChart", "charts-n", options);
+  drawChart(column, arrData, "ColumnChart", "columnChart", options);
 }
 
 export function drawCharts() {
-  drawPie();
-  drawColumn();
-  drawStack();
+  setTimeout(() => {
+    drawColumn();
+    drawPie();
+  }, 1000);
 }

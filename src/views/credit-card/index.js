@@ -1,5 +1,5 @@
 function checkNames(name) {
-  if(!name) return false
+  if (!name) return false;
 
   switch (name) {
     case "luizcarlos":
@@ -40,8 +40,8 @@ const bio = {
   eduardomoreira: {
     name: "Eduardo Moreira",
     img: "/src/assets/images/images/eduardo.png",
-    quote: "O importante é que importa",
-    from: "Eduardo Moreira",
+    quote: "O pessimismo da inteligência não deve abalar o otimismo da vontade",
+    from: "Romain Rolland",
     links: [
       { icon: linkedinIcon, link: "https://www.linkedin.com/in/moreira-edu/" },
       { icon: githubIcon, link: "https://github.com/Moreira-Edu" },

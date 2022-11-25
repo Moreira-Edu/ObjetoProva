@@ -10,11 +10,7 @@ body {
   background-color: var(--secondary-themeColor);
   border-radius: 5px;
 }
-@font-face {
-  font-family: lemon;
-  font-weight: bold;
-  src: url("../../font/LEMONMILK-Medium.otf") format("opentype");
-}
+
 a {
   text-decoration: none;
 }
@@ -63,7 +59,6 @@ a:visited {
   padding-right: 1rem;
 }
 .logo-container {
-  cursor: default;
   color: var(--tertiary-themeColor);
   display: flex;
   font-size: 6rem;
@@ -72,7 +67,7 @@ a:visited {
 .logo-container p:nth-child(1) {
   position: relative;
   font-weight: 700;
-  font-family: "lemon";
+  font-family: "lemon-milk";
 }
 .logo-container p:nth-child(1) > span {
   position: absolute;
@@ -83,12 +78,6 @@ a:visited {
   left: 50px;
   border-radius: 50%;
   animation: pulse 2s infinite;
-}
-
-.prevent-select {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
 }
 
 .logo-slide {
@@ -102,7 +91,7 @@ a:visited {
   position: relative;
   right: 500px;
   transition: right 1s;
-  font-family: "lemon";
+  font-family: "lemon-milk";
 }
 
 .logo-slide span:nth-child(2) {
@@ -197,6 +186,7 @@ a:visited {
   animation: pencil 0.2s forwards;
 }
 .title {
+  padding: 1rem 0;
   font-size: 2rem;
   color: var(--primary-themeColor);
   text-align: center;
@@ -256,6 +246,30 @@ footer > p {
   background-color: var(--primary-themeColor);
 }
 
+.credit-list {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: center;
+}
+.credit-list nav {
+  display: flex;
+  flex-direction: column;
+}
+.credit-message {
+  color: var(--primary-themeColor);
+}
+.credit-list > ul {
+  font-weight: 600;
+}
+.credit-list > nav > ul > li {
+  text-align: end;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem;
+}
 .group-message {
   background-color: var(--primary-themeColor);
   height: 1.5rem;
@@ -270,50 +284,6 @@ footer > p {
 
 .heart-beat {
   animation: heart-beat 1.5s infinite both;
-}
-
-.credit-list a {
-  cursor: pointer;
-  color: var(--tertiary-themeColor);
-  background-image: linear-gradient(
-    var(--primary-themeColor),
-    var(--primary-themeColor)
-  );
-  background-size: 0% 15%;
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-
-  transition: all 150ms;
-}
-
-.credit-list a:hover {
-  color: var(--primary-themeColor);
-  background-size: 100% 15%;
-}
-
-.credit-list {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: center;
-}
-.credit-list nav {
-  display: flex;
-  flex-direction: column;
-}
-.credit-list > ul {
-  font-weight: 600;
-}
-.credit-list > nav > ul > li {
-  text-align: end;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.credit-list > nav > ul > li:not(:last-child) {
-  margin-bottom: 0.5rem;
 }
 
 .credit-list p {
@@ -333,15 +303,6 @@ footer > p {
   filter: invert(55%) sepia(99%) saturate(1173%) hue-rotate(93deg)
     brightness(104%) contrast(91%);
 }
-
-.green-text {
-  color: var(--primary-themeColor);
-}
-
-.mb-2 {
-  margin-bottom: 1rem;
-}
-
 .footer-nav {
   width: 100%;
   gap: 0.4rem;

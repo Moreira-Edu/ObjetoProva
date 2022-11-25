@@ -29,7 +29,6 @@ header {
 }
 
 .logo-container {
-  font-family: "lemon-milk" !important;
   font-size: 5rem;
   background-color: var(--secondary-themeColor);
   display: flex;
@@ -51,6 +50,10 @@ header {
 .logo:visited {
   color: var(--tertiary-themeColor);
   text-decoration: none;
+}
+
+.logo > span {
+  font-family: "lemon-milk";
 }
 
 .logo::after {
@@ -80,7 +83,9 @@ header {
   transition: transform 300ms;
   z-index: 0;
 }
-
+.logo-extended > span {
+  font-family: "lemon-milk";
+}
 .logo-extended :nth-child(1) {
   font-weight: 700;
   font-size: 4rem;
@@ -154,28 +159,34 @@ main {
   height: calc(100vh - 14.5rem);
   width: 100%;
   display: grid;
-  grid-template-columns: 100% 0%;
+  grid-template-columns: 100% 50%;
   grid-template-rows: 100%;
-  transition: grid-template-columns 500ms;
+  transition: grid-template-columns 600ms ease-in;
   overflow: hidden;
 }
-
+.resultsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
 #TestContainer {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   overflow-y: scroll;
+  width: 100%;
 }
 
 .question {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: max-content 40% 10%;
+  grid-template-rows: repeat(4, max-content);
   /* border: 1px solid var(--secondary-themeColor); */
   box-shadow: 1px 0 5px var(--secondary-themeColor);
   border-radius: calc(1rem / 2);
-  max-height: 100%;
+  height: max-content;
 }
 
 .question .question-text {
@@ -232,10 +243,13 @@ main {
 
 .question small {
   text-align: right;
-  padding: 0 1rem;
+  padding: 1rem;
   color: rgba(0, 0, 0, 0.5);
 }
 
+.statistic {
+  margin: 0 auto;
+}
 .progress-area {
   position: relative;
   height: 0.5rem;
