@@ -1,4 +1,4 @@
-@import url(../../../assets/css/themes/all.css);
+@import url(../themes/all.css);
 
 .group-message {
   background-color: var(--primary-themeColor);
