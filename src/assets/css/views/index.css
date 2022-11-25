@@ -28,6 +28,18 @@ a:visited {
   height: fit-content;
 }
 
+.logo-container {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
 .header-container > .container::after {
   content: "";
   place-self: center;
@@ -246,6 +258,49 @@ footer > p {
   background-color: var(--primary-themeColor);
 }
 
+.group-message {
+  background-color: var(--primary-themeColor);
+  height: 1.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+  user-select: none;
+}
+
+.heart-beat {
+  animation: heart-beat 1.5s infinite both;
+}
+
+.credit-list a {
+  cursor: pointer;
+  color: var(--tertiary-themeColor);
+  background-image: linear-gradient(
+    var(--primary-themeColor),
+    var(--primary-themeColor)
+  );
+  background-size: 0% 15%;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+
+  transition: all 150ms;
+}
+
+.credit-list a:hover {
+  color: var(--primary-themeColor);
+  background-size: 100% 15%;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.green-text {
+  color: var(--primary-themeColor);
+}
+
 .credit-list {
   display: flex;
   flex-direction: column;
@@ -282,8 +337,8 @@ footer > p {
   user-select: none;
 }
 
-.heart-beat {
-  animation: heart-beat 1.5s infinite both;
+.credit-list > nav > ul > li:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 .credit-list p {

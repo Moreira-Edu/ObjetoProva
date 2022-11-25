@@ -163,6 +163,7 @@ main {
   grid-template-rows: 100%;
   transition: grid-template-columns 600ms ease-in;
   overflow: hidden;
+  background-color: var(--tertiary-themeColor);
 }
 .resultsContainer {
   display: flex;
