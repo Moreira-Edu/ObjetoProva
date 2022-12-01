@@ -36,6 +36,7 @@
   background-position: center;
   background-size: auto 100%;
   z-index: 0;
+  transform: scale(1.1);
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
@@ -73,14 +74,19 @@
 
 .card-content p {
   font-size: x-large;
+  text-shadow: 1px 1px black;
+
 }
 
 .card-content small {
   font-size: small;
+  text-shadow: 1px 1px black;
+
 }
 
 .card-content h1 {
   margin-bottom: 2rem;
+  text-shadow: 1px 1px black;
 }
 
 .card-links {
