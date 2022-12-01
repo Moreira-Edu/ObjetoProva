@@ -1,7 +1,7 @@
 import { checkAnswer, Answers, Test } from "./index.js";
 
 export function writeResult() {
-  console.log(Answers)
+  console.log(Answers);
   let correctAnswer = 0;
   Object.entries(Answers).forEach(([questionId, optionId]) => {
     if (checkAnswer(Number(questionId), Number(optionId))) correctAnswer++;
@@ -17,7 +17,7 @@ export function writeResult() {
 }
 
 export function getResult() {
-  writeResult()
+  writeResult();
   return JSON.parse(localStorage.getItem("result"));
 }
 
